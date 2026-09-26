@@ -8,3 +8,22 @@ outputs/matcher_features_s2_india_sample.parquet
 
 # Local datasets
 data/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated pipeline data
+outputs/indexes/
+outputs/test_indexes/
+outputs/test_inference/
+outputs/training_pairs/
+
+# Logs / benchmark outputs
+outputs/*.log
+outputs/*.txt
+outputs/*.pkl
+
+# Large temporary artifacts
+*.tar.gz

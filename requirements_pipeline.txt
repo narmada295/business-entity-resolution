@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+scikit-learn
+sparse-dot-topn
+rapidfuzz
+lightgbm
+pyarrow
+Unidecode
+tqdm
+psutil
