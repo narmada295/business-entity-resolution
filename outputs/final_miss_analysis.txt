@@ -1,0 +1,211 @@
+Final misses: 1,935
+Joined rows: 1,935
+
+================================================================================
+FINAL MISS CHARACTERISTICS
+================================================================================
+Remaining true links: 1,935
+
+Missing target address:
+22.43%
+
+Cross-script-like:
+62.12%
+
+At least one shared address number:
+64.81%
+
+Name token Jaccard:
+count    1935.000000
+mean        0.186066
+std         0.270226
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         0.500000
+90%         0.600000
+max         0.800000
+Name: name_token_jaccard, dtype: float64
+
+Address token Jaccard:
+count    1935.000000
+mean        0.268759
+std         0.194949
+min         0.000000
+25%         0.130435
+50%         0.272727
+75%         0.400000
+90%         0.515789
+max         0.900000
+Name: address_token_jaccard, dtype: float64
+
+Transliterated-name score:
+count    1935.000000
+mean       75.010714
+std        15.269472
+min         0.000000
+25%        67.567568
+50%        74.666667
+75%        85.245902
+90%        93.548387
+max       100.000000
+Name: translit_name_score, dtype: float64
+
+================================================================================
+FAILURE BUCKETS
+================================================================================
+bucket_missing_address             434  (22.43%)
+bucket_cross_script              1,202  (62.12%)
+bucket_number_overlap            1,254  (64.81%)
+bucket_high_address_overlap        271  (14.01%)
+bucket_high_name_overlap           533  (27.55%)
+bucket_good_translit             1,309  (67.65%)
+
+================================================================================
+IMPORTANT COMBINATIONS
+================================================================================
+number + high address overlap              246  (12.71%)
+cross-script + good translit               696  (35.97%)
+missing address + good name                360  (18.60%)
+no number + low address + low name         273  (14.11%)
+
+Saved:
+/home/mahaswint/amazon-ml/code/outputs/final_blocking_miss_analysis.csv
+
+================================================================================
+NUMBER + HIGH ADDRESS OVERLAP EXAMPLES
+================================================================================
+
+S1: East Projects Private Limited
+S2: ईस्ट प्रोजेक्ट्स प्राइवेट लिमिटेड
+S1 addr: Jaipur, Plot No 160-A, Jaipur, Kesar Green, Rajasthan
+S2 addr: #160-A, JAIPUR, Rajasthan
+Address Jaccard: 0.5
+Number overlap: 1
+
+S1: International Finance Private Limited
+S2: ಇಂಟರ್‌ನ್ಯಾಷನಲ್ ಫೈನಾನ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್
+S1 addr: No.302, 6Th Main, Vyalikaval, Bangalore, Karnataka
+S2 addr: NO.302, BANGALORE, Karnataka
+Address Jaccard: 0.5714285714285714
+Number overlap: 1
+
+S1: Anand Builders Private Limited
+S2: Anand Builders
+S1 addr: E-41/5 Okhla Industrial Areaphase-I, New Delhi, South Delhi, Delhi
+S2 addr: E-#41/5 OKHLA INDUSTIRAL AREAPHASE-I, NEW DELHI, Delhi
+Address Jaccard: 0.7272727272727273
+Number overlap: 2
+
+S1: North Products Private Limited
+S2: नॉर्थ प्रोडक्ट्स प्राइवेट लिमिटेड
+S1 addr: Delhi, Buddh Vihar Phase-1, R-1/68, Delhi, North West
+S2 addr: R-C-1/68, DELHI, NORTH WEST, Delhi
+Address Jaccard: 0.6
+Number overlap: 2
+
+S1: North Products Private Limited
+S2: नॉर्थ प्रोडक्ट्स प्राइवेट लिमिटेड
+S1 addr: Delhi, Buddh Vihar Phase-1, R-1/68, Delhi, North West
+S2 addr: R-C-1/68, DELHI, NORTH WEST, Delhi
+Address Jaccard: 0.6
+Number overlap: 2
+
+S1: Rosy Metaliks Private Limited
+S2: rosymetaliksprivate.com
+S1 addr: Plot No Gh 03 Sector-100, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 addr: PLOT NO GH 03 SECTOR-100, NOIDA, N/A, Uttar Pradesh
+Address Jaccard: 0.6428571428571429
+Number overlap: 2
+
+S1: Rosy Metaliks Private Limited
+S2: Rosy Metaliks
+S1 addr: Plot No Gh 03 Sector-100, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 addr: PLOT NO GH 03 SECTOR-100, NOIDA, N/A, Uttar Pradesh
+Address Jaccard: 0.6428571428571429
+Number overlap: 2
+
+S1: Grs Hospital Private Limited
+S2: Grs Hospital Private Ltd
+S1 addr: C-10/5 Vasant Vihar, New Delhi, South West, Delhi
+S2 addr: DOOR NO 902 C-10/5 VASANT VIHAR, NEW DELHI, Delhi
+Address Jaccard: 0.5833333333333334
+Number overlap: 2
+
+S1: Grs Hospital Private Limited
+S2: Grs Hospital  Private
+S1 addr: C-10/5 Vasant Vihar, New Delhi, South West, Delhi
+S2 addr: #902 C-10/5 VASANT VIHAR, NEW DELHI, Delhi
+Address Jaccard: 0.7
+Number overlap: 2
+
+S1: Grs Hospital Private Limited
+S2: Grs Private Limited Services
+S1 addr: C-10/5 Vasant Vihar, New Delhi, South West, Delhi
+S2 addr: #902 C-10/5 VASANT VIHAR, NEW DELHI, दिल्ली
+Address Jaccard: 0.5833333333333334
+Number overlap: 2
+
+================================================================================
+CROSS-SCRIPT + GOOD TRANSLITERATION EXAMPLES
+================================================================================
+
+S1: Anand Energy Limited
+S2: आनंद एनर्जी लिमिटेड
+S1 translit: anand energy limited
+S2 translit: aannd enrjii limittedd
+Translit score: 76.19047619047619
+
+S1: Golden Foods Private Limited
+S2: गोल्डन फूड्स प्राइवेट लिमिटेड
+S1 translit: golden foods private limited
+S2 translit: golddn phuudds praaivett limittedd
+Translit score: 70.96774193548387
+
+S1: Tech It Limited
+S2: टेक It Limited
+S1 translit: tech it limited
+S2 translit: ttek it limited
+Translit score: 86.66666666666667
+
+S1: Great Care Private Limited
+S2: ગ્રેટ કેર પ્રાઇવેટ લિમિટેડ
+S1 translit: great care private limited
+S2 translit: grett ker praaivett limittedd
+Translit score: 72.72727272727273
+
+S1: East Projects Private Limited
+S2: ईस्ट प्रोजेक्ट्स प्राइवेट लिमिटेड
+S1 translit: east projects private limited
+S2 translit: iistt projektts praaivett limittedd
+Translit score: 75.0
+
+S1: Apex Logistics Private Limited
+S2: એપેક્સ લોજિસ્ટિક્સ પ્રાઇવેટ લિમિટેડ
+S1 translit: apex logistics private limited
+S2 translit: epeks lojisttiks praaivett limittedd
+Translit score: 72.72727272727273
+
+S1: Shakti Enterprises Private Limited
+S2: शक्ति एंटरप्राइजेज प्राइवेट लिमिटेड
+S1 translit: shakti enterprises private limited
+S2 translit: shkti enttrpraaijej praaivett limittedd
+Translit score: 76.7123287671233
+
+S1: Ace Consulting Private Limited
+S2: एस कंसल्टिंग प्राइवेट लिमिटेड
+S1 translit: ace consulting private limited
+S2 translit: es knsltting praaivett limittedd
+Translit score: 74.19354838709677
+
+S1: Swastik Agro Private Limited
+S2: स्वस्तिक एग्रो प्राइवेट लिमिटेड
+S1 translit: swastik agro private limited
+S2 translit: svstik egro praaivett limittedd
+Translit score: 77.96610169491525
+
+S1: Maa Energy Private Limited
+S2: माँ एनर्जी प्राइवेट लिमिटेड
+S1 translit: maa energy private limited
+S2 translit: maan enrjii praaivett limittedd
+Translit score: 73.6842105263158

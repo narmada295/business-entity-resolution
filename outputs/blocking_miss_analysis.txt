@@ -1,0 +1,622 @@
+Blocking miss analysis
+
+Loading India validation S1...
+India validation entities: 176,736
+Sampled: 20,000
+
+Loading sample ground truth...
+True S2 links: 33,472
+chunks=1   read=100,000 India=40,064 elapsed=17.3schunks=2   read=200,000 India=80,432 elapsed=34.7schunks=3   read=300,000 India=120,536 elapsed=51.8schunks=4   read=400,000 India=160,461 elapsed=68.7schunks=5   read=500,000 India=200,531 elapsed=85.7schunks=6   read=600,000 India=240,976 elapsed=102.8schunks=7   read=700,000 India=280,868 elapsed=119.8schunks=8   read=800,000 India=320,793 elapsed=136.6schunks=9   read=900,000 India=361,045 elapsed=153.7schunks=10  read=1,000,000 India=400,819 elapsed=170.5schunks=11  read=1,100,000 India=440,597 elapsed=187.5schunks=12  read=1,200,000 India=480,826 elapsed=204.6schunks=13  read=1,300,000 India=520,849 elapsed=221.6schunks=14  read=1,400,000 India=561,239 elapsed=238.8schunks=15  read=1,500,000 India=601,135 elapsed=255.8schunks=16  read=1,600,000 India=640,882 elapsed=272.7schunks=17  read=1,700,000 India=680,693 elapsed=289.5schunks=18  read=1,800,000 India=720,557 elapsed=306.4schunks=19  read=1,900,000 India=760,822 elapsed=323.4schunks=20  read=2,000,000 India=800,924 elapsed=340.3schunks=21  read=2,100,000 India=840,817 elapsed=357.2schunks=22  read=2,200,000 India=880,925 elapsed=374.1schunks=23  read=2,300,000 India=921,048 elapsed=390.9schunks=24  read=2,400,000 India=961,121 elapsed=407.7schunks=25  read=2,500,000 India=1,001,290 elapsed=424.6schunks=26  read=2,600,000 India=1,041,462 elapsed=441.4schunks=27  read=2,700,000 India=1,081,449 elapsed=458.3schunks=28  read=2,800,000 India=1,121,618 elapsed=475.2schunks=29  read=2,900,000 India=1,161,838 elapsed=492.3schunks=30  read=3,000,000 India=1,202,006 elapsed=509.2schunks=31  read=3,100,000 India=1,242,080 elapsed=526.0schunks=32  read=3,200,000 India=1,282,119 elapsed=542.9schunks=33  read=3,300,000 India=1,322,261 elapsed=559.7schunks=34  read=3,400,000 India=1,362,603 elapsed=576.7schunks=35  read=3,500,000 India=1,402,592 elapsed=593.5schunks=36  read=3,600,000 India=1,442,606 elapsed=610.3schunks=37  read=3,700,000 India=1,482,817 elapsed=627.3schunks=38  read=3,800,000 India=1,522,939 elapsed=644.3schunks=39  read=3,900,000 India=1,563,315 elapsed=661.3schunks=40  read=4,000,000 India=1,603,607 elapsed=678.3schunks=41  read=4,100,000 India=1,643,570 elapsed=695.0schunks=42  read=4,200,000 India=1,683,669 elapsed=711.8schunks=43  read=4,300,000 India=1,723,507 elapsed=728.6schunks=44  read=4,400,000 India=1,763,601 elapsed=745.4schunks=45  read=4,500,000 India=1,803,696 elapsed=762.5schunks=46  read=4,600,000 India=1,843,411 elapsed=779.4schunks=47  read=4,700,000 India=1,883,444 elapsed=796.4schunks=48  read=4,800,000 India=1,923,560 elapsed=813.3schunks=49  read=4,900,000 India=1,963,734 elapsed=831.4schunks=50  read=5,000,000 India=2,003,911 elapsed=848.4schunks=51  read=5,034,616 India=2,017,799 elapsed=854.6s
+
+Search complete in 854.61s
+
+Saving candidate cache to:
+/home/mahaswint/amazon-ml/code/outputs/s2_india_sample_candidates.pkl
+
+===========================================================================
+MISS SUMMARY
+===========================================================================
+Total true links: 33,472
+Recovered: 30,217
+Missed: 3,255
+Recall: 90.2755%
+
+Loading missed S2 records...
+
+Saved miss table to:
+/home/mahaswint/amazon-ml/code/outputs/s2_india_blocking_misses.csv
+
+===========================================================================
+MISS CHARACTERISTICS
+===========================================================================
+Missed links: 3,255
+
+Target address missing:
+target_address_missing
+0    0.858372
+1    0.141628
+Name: proportion, dtype: float64
+
+Name token Jaccard:
+count    3255.000000
+mean        0.201808
+std         0.274120
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         0.500000
+90%         0.600000
+max         1.000000
+Name: name_token_jaccard, dtype: float64
+
+Address token Jaccard:
+count    3255.000000
+mean        0.356802
+std         0.218331
+min         0.000000
+25%         0.222222
+50%         0.352941
+75%         0.500000
+90%         0.666667
+max         0.937500
+Name: address_token_jaccard, dtype: float64
+
+Missed pairs with >=1 common address number:
+76.28%
+
+
+===========================================================================
+RANDOM MISSED EXAMPLES
+===========================================================================
+
+--- MISS 1 ---
+S1 name: Rosy Metaliks Private Limited
+S2 name: Rosy Metaliks
+Name token Jaccard: 0.500
+
+S1 address: Plot No Gh 03 Sector-100, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 address: PLOT NO GH 03 SECTOR-100, NOIDA, N/A, Uttar Pradesh
+Address token Jaccard: 0.643
+S1 numbers: 03,100
+S2 numbers: 03,100
+
+--- MISS 2 ---
+S1 name: Phulwari Property Private Limited
+S2 name: Phulwari Popeby Private Limited
+Name token Jaccard: 0.600
+
+S1 address: Jp Complex Building, Near Karlo Automobile, Phulwari, Patna, Bihar
+S2 address: 
+Address token Jaccard: 0.000
+S1 numbers: 
+S2 numbers: 
+
+--- MISS 3 ---
+S1 name: Aditya It Private Limited
+S2 name: আদিত্য আইটি প্রাইভেট লিমিটেড
+Name token Jaccard: 0.000
+
+S1 address: 6H, Ho-Chi-Minh Sarani, Flat No-9, 3Rd Floor, Kolkata, Kolkata, Howrah, West Bengal
+S2 address: HOWRAH, West Bengal, 6H, KOLKATA
+Address token Jaccard: 0.357
+S1 numbers: 3,6,9
+S2 numbers: 6
+
+--- MISS 4 ---
+S1 name: North International LLP
+S2 name: நார்த் இன்டர்நேஷனல் எல்எல்பி
+Name token Jaccard: 0.000
+
+S1 address: Ranjanipriya Nagar, Kondur, Velisemmandalam, Cuddalore, Tamil Nadu, No.53
+S2 address: H.NO 53, CUDDALORE, தமிழ்நாடு
+Address token Jaccard: 0.214
+S1 numbers: 53
+S2 numbers: 53
+
+--- MISS 5 ---
+S1 name: Live Trading LLP
+S2 name: LIVE TRÁDING LLP
+Name token Jaccard: 0.500
+
+S1 address: S - 402, Greater Kailash, Part - Ii, New Delhi, Delhi
+S2 address: S - 402, GREATER KAILASH, PART - II, Delhi
+Address token Jaccard: 0.875
+S1 numbers: 402
+S2 numbers: 402
+
+--- MISS 6 ---
+S1 name: Al Infotech Pvt Ltd
+S2 name: अल इंफोटेक प्रा. लि.
+Name token Jaccard: 0.000
+
+S1 address: 10 Floor-2 Plot-320, 33A, Jagat Bhuvan Shree Bhairamdev Mandir Rd Behind Wadala Marke, T Wadala-W, Mumbai, Mumbai City, Maharashtra
+S2 address: H.NO #10 FLOOR-2 PLOT-320, MUMBAI, Maharashtra
+Address token Jaccard: 0.318
+S1 numbers: 10,2,320,33
+S2 numbers: 10,2,320
+
+--- MISS 7 ---
+S1 name: Aditya Power Private Limited
+S2 name: আদিত্য পাওয়ার প্রাইভেট লিমিটেড
+Name token Jaccard: 0.000
+
+S1 address: West Bengal, N.S. Road 444, Marshal House, Kolkata, Howrah, 33/1
+S2 address: 33/1, HOWRAH, KOLKATA, West Bengal
+Address token Jaccard: 0.500
+S1 numbers: 1,33,444
+S2 numbers: 1,33
+
+--- MISS 8 ---
+S1 name: Perfect Trading Private Limited
+S2 name: परफेक्ट ट्रेडिंग प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Sr. No. 5A Rangvarsha, Developers Fl. No. 203, Haveli, Pune, Maharashtra
+S2 address: SR. NO. ##5A RANGVARSHA, HAVELI, महाराष्ट्र
+Address token Jaccard: 0.357
+S1 numbers: 203,5
+S2 numbers: 5
+
+--- MISS 9 ---
+S1 name: Prime Green International Private Limited
+S2 name: પ્રાઇમ ગ્રીન ઇન્ટરનેશનલ પ્રાઇવેટ લિમિટેડ
+Name token Jaccard: 0.000
+
+S1 address: Office 606 To 608, Shapath -5, Opp. Karnavati Club, S.G. Highway, Vejalpur, Ahmadabad City, Ahmedabad, Gujarat
+S2 address: OFFICE 60 TO 608, AHMADABAD CITY, AHMEDABAD, ગુજરાત
+Address token Jaccard: 0.286
+S1 numbers: 5,606,608
+S2 numbers: 60,608
+
+--- MISS 10 ---
+S1 name: Jai First Media Limited
+S2 name: জয় ফার্স্ট মিডিয়া লিমিটেড
+Name token Jaccard: 0.000
+
+S1 address: 70B, Govindapur Road, Kolkata, Kolkata, Howrah, West Bengal
+S2 address: 70B, CALCUTTA, HOWRAH, West Bengal
+Address token Jaccard: 0.500
+S1 numbers: 70
+S2 numbers: 70
+
+--- MISS 11 ---
+S1 name: Jain Investment Private Limited
+S2 name: जैन इन्वेस्टमेंट प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: 5Th Floor, City Centre Dwarka Sector - 12, Delhi, South West Delhi, New Delhi, 524
+S2 address: 524, NEW DELHI, SOUTH WEST DELHI, Delhi
+Address token Jaccard: 0.417
+S1 numbers: 12,5,524
+S2 numbers: 524
+
+--- MISS 12 ---
+S1 name: Shiv Consultants Private Limited
+S2 name: SHIV COLSEULTAMGNTS PRIVATE LIMITED
+Name token Jaccard: 0.600
+
+S1 address: 3, Renuka Nagar, Mapar Wadi Road, Sinner, Nashik, Maharashtra
+S2 address: 
+Address token Jaccard: 0.000
+S1 numbers: 3
+S2 numbers: 
+
+--- MISS 13 ---
+S1 name: Pioneer Food Private Limited
+S2 name: पायोनियर फूड प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Row No 6, Plot No 1 To 9, Mohini Nagar, Kedgaon, Ahmednagar, Ahmed Nagar, Maharashtra
+S2 address: H.NO 352 ROW NO 6, PLOT NO 1 TO 9, MOHINI NAGAR, KEDGAON, AHILYANAGAR, Maharashtra
+Address token Jaccard: 0.688
+S1 numbers: 1,6,9
+S2 numbers: 1,352,6,9
+
+--- MISS 14 ---
+S1 name: Big Ventures Pvt Ltd
+S2 name: বিগ ভেঞ্চারস প্রাইভেট লিমিটেড
+Name token Jaccard: 0.000
+
+S1 address: Holding No-134, Mehedibagan, G.T Road, Po-Burdwan, Burdwan - I, Bardhaman, West Bengal
+S2 address: HOLDING NO-134, BARDHAMAN, পশ্চিমবঙ্গ
+Address token Jaccard: 0.235
+S1 numbers: 134
+S2 numbers: 134
+
+--- MISS 15 ---
+S1 name: Mumbai Services Pvt Ltd
+S2 name: Mumbai Pvt Ltd Service
+Name token Jaccard: 0.600
+
+S1 address: Mumbai, Prabhat Chambers, Plot No 92, S.V. Road, Mumbai, Maharashtra, Off-401
+S2 address: 
+Address token Jaccard: 0.000
+S1 numbers: 401,92
+S2 numbers: 
+
+--- MISS 16 ---
+S1 name: One Consultancy Private Limited
+S2 name: ਵਨ ਕੰਸਲਟੈਂਸੀ ਪ੍ਰਾਈਵੇਟ ਲਿਮਟਿਡ
+Name token Jaccard: 0.000
+
+S1 address: Chak Hakim, Near Kamla Nehra School, Phagwara, Phagwara, Kapurthala, Punjab
+S2 address: KAPURTHALA, PUNJAB WEST REGION, CHAK HAKIM, ਪੰਜਾਬ
+Address token Jaccard: 0.286
+S1 numbers: 
+S2 numbers: 
+
+--- MISS 17 ---
+S1 name: Sky Services Private Limited
+S2 name: स्काई सर्विसेज प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: 433, East Delhi, Functional Industrial Estate, Patparganj, Delhi
+S2 address: H.NO 129 433, EAST DELHI, DELHI
+Address token Jaccard: 0.300
+S1 numbers: 433
+S2 numbers: 129,433
+
+--- MISS 18 ---
+S1 name: Global Tirupati Industries Pvt Ltd
+S2 name: Global Tbpafoti Industries Pvt Ltd
+Name token Jaccard: 0.667
+
+S1 address: S-210 F/F Greater Kailash, Ii New Delhi, New Delhi, South Delhi, Delhi
+S2 address: Delhi, DOOR NO 159 S-210 F/F GREATER KAILASH, II NEW DELHI, NEW DELHI
+Address token Jaccard: 0.667
+S1 numbers: 210
+S2 numbers: 159,210
+
+--- MISS 19 ---
+S1 name: Hari Services Pvt Ltd
+S2 name: ಹರಿ ಸರ್ವಿಸಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್
+Name token Jaccard: 0.000
+
+S1 address: H.No.47, Ward No.8, Near School Main Road, Lingasugur, Raichur, Karnataka
+S2 address: H.NO.47, NULL, NORTH KARNATAKA REGION, RAICHUR, Karnataka
+Address token Jaccard: 0.333
+S1 numbers: 47,8
+S2 numbers: 47
+
+--- MISS 20 ---
+S1 name: Infra Rajiv Builders Private Limited
+S2 name: INFRARAJIVBUILDERS.COM
+Name token Jaccard: 0.000
+
+S1 address: B-08, A86, Sector-4, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 address: HN D/584 B-08, A86, SECTOR-4, NOIDA, Uttar Pradesh
+Address token Jaccard: 0.571
+S1 numbers: 08,4,86
+S2 numbers: 08,4,584,86
+
+--- MISS 21 ---
+S1 name: Dynamic Care Private Limited
+S2 name: डायनामिक केयर प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Delhi, Ratiya Marg, Sangam Vihar, G-9/220 Ground Floor, South Delhi, Delhi
+S2 address: G-9/220 GROUND FLOOR, DELHI, दिल्ली, SOUTH DELHI
+Address token Jaccard: 0.538
+S1 numbers: 220,9
+S2 numbers: 220,9
+
+--- MISS 22 ---
+S1 name: Balaji Properties LLP
+S2 name: बालाजी प्रॉपर्टीज एलएलपी
+Name token Jaccard: 0.000
+
+S1 address: R-193, Vani Vihar Uttam Nagar, New Delhi, Delhi
+S2 address: #591 R-193, VANI VIHAR UTTAM NAGAR, UTTAM NAGAR, Delhi
+Address token Jaccard: 0.778
+S1 numbers: 193
+S2 numbers: 193,591
+
+--- MISS 23 ---
+S1 name: Daddy Brothers Limited
+S2 name: DADDY-BROTHERS LTD
+Name token Jaccard: 0.500
+
+S1 address: C-96, Sector- 50, Noida, Gautam Buddha Nagar, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 address: C-9-6, SECTOR- 50, NOIDA, GAUTAM BUDDHA NAGAR, NOIDA, Uttar Pradesh
+Address token Jaccard: 0.750
+S1 numbers: 50,96
+S2 numbers: 50,6,9
+
+--- MISS 24 ---
+S1 name: Great Edge Private Limited
+S2 name: M/s GREAT EDGE PRÍVATE LIMITED
+Name token Jaccard: 0.429
+
+S1 address: D.No.70-179-14, Sasikanth Nagar Kakinada, Kakinada, East Godavari, Andhra Pradesh
+S2 address: 0070-179-14 , SASIKANTH NAGAR KAKINADA, KAKINADA, ఆంధ్రప్రదేశ్
+Address token Jaccard: 0.278
+S1 numbers: 14,179,70
+S2 numbers: 0070,14,179
+
+--- MISS 25 ---
+S1 name: Om Analytics Limited
+S2 name: Ltd Om Analytics
+Name token Jaccard: 0.500
+
+S1 address: Nr. Gate No. 4, Opp. Vadwala Ramapir Mandir, New Fruit Market Yard, Naroda Road, Ahmedabad, Gujarat
+S2 address: BLOK A-161 NR. GATE NO. 4, AHMEDABAD, Gujarat
+Address token Jaccard: 0.316
+S1 numbers: 4
+S2 numbers: 161,4
+
+--- MISS 26 ---
+S1 name: North Power Private Limited
+S2 name: నార్త్ పవర్ ప్రైవేట్ లిమిటెడ్
+Name token Jaccard: 0.000
+
+S1 address: Plot 61/B, 12-5-147/R/403, Rohit Avenue, Vijayapuri, Secunderabad, Hyderabad, Telangana
+S2 address: PLOT 61/B, N/A, SECUNDERABAD, Telangana
+Address token Jaccard: 0.312
+S1 numbers: 12,147,403,5,61
+S2 numbers: 61
+
+--- MISS 27 ---
+S1 name: United Media Private Limited
+S2 name: યુનાઇટેડ મીડિયા પ્રાઇવેટ લિમિટેડ
+Name token Jaccard: 0.000
+
+S1 address: Office No. 62, 6Th Floor, Titanium, Corporate Road, Prahladnagar Ahmedabad, Ahmadabad City, Ahmedabad, Gujarat
+S2 address: H.NO 933 OFFICE NO. 62, AHMADABAD CITY, AHMEDABAD, Gujarat
+Address token Jaccard: 0.467
+S1 numbers: 6,62
+S2 numbers: 62,933
+
+--- MISS 28 ---
+S1 name: Jai Solutions Limited
+S2 name: LTD JAI SOLUTIONS
+Name token Jaccard: 0.500
+
+S1 address: Standford Plaza, Pltot B/65, Off. New Link Road Andheri (West), Mumbai, 5, Maharashtra, Mumbai City
+S2 address: 5/6, null, MUMBAI CITY, MUMBAI, Maharashtra
+Address token Jaccard: 0.235
+S1 numbers: 5,65
+S2 numbers: 5,6
+
+--- MISS 29 ---
+S1 name: Jai Aditya Developers Limited
+S2 name: जय आदित्य डेवलपर्स लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Pune, S. No. 38, Pune, Maharashtra, H. No. 5A/2/5B (P), Office No. 101 Ko Pune City Pune Pune (Cb)
+S2 address: PUNE REGION, PUNE, Maharashtra, S. NO. 38
+Address token Jaccard: 0.312
+S1 numbers: 101,2,38,5
+S2 numbers: 38
+
+--- MISS 30 ---
+S1 name: Gm Travels Private Limited
+S2 name: Gm Travels Private Ltd
+Name token Jaccard: 0.600
+
+S1 address: H-87, Sector-63, Noida, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 address: H-87, SECTOR-63, NOIDA, NOIDA, Uttar Pradesh
+Address token Jaccard: 0.700
+S1 numbers: 63,87
+S2 numbers: 63,87
+
+--- MISS 31 ---
+S1 name: Urban Hari Exports Private Limited
+S2 name: అర్బన్ హరి ఎక్స్‌పోర్ట్స్ ప్రైవేట్ లిమిటెడ్
+Name token Jaccard: 0.000
+
+S1 address: Flat No 1, Swagruha E-Block, Door No-2-22-1/55/1 Street No 3, Bhagyanagar Colony, Kphb, Kukatpally, Hyderabad, Telangana
+S2 address: DOOR NO 1, KUKATPALLY, HYDERABAD, Andhra Pradesh
+Address token Jaccard: 0.250
+S1 numbers: 1,2,22,3,55
+S2 numbers: 1
+
+--- MISS 32 ---
+S1 name: Star Foods Private Limited
+S2 name: स्टार फूड्स प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: 1/100, Viram Khand Gomti Nagar, Lucknow, Uttar Pradesh
+S2 address: ##1/100, VIRAM KHAND GOMTI NAGAR, LUCKNOW, उत्तर प्रदेश
+Address token Jaccard: 0.500
+S1 numbers: 1,100
+S2 numbers: 1,100
+
+--- MISS 33 ---
+S1 name: Niks Technologies Care
+S2 name: Dr NIKS TCHNOLGOIES CARE
+Name token Jaccard: 0.400
+
+S1 address: 14 A.D No.4, Gayathri St, Moorthy Nagar, Plot No, Kanchipuram, Saidapet, Tamil Nadu
+S2 address: 
+Address token Jaccard: 0.000
+S1 numbers: 14,4
+S2 numbers: 
+
+--- MISS 34 ---
+S1 name: Sree Properties Private Limited
+S2 name: श्री प्रॉपर्टीज प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: 26, Triveni Apttswest Enclave Pitampura 6 Outer Ring Road, Delhi, North Delhi, Delhi
+S2 address: 26, DELHI, NORTH DELHI, Delhi
+Address token Jaccard: 0.273
+S1 numbers: 26,6
+S2 numbers: 26
+
+--- MISS 35 ---
+S1 name: Om International Private Limited
+S2 name: ॐ इंटरनेशनल प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Shop No. C-18, Lodha, Elite Bldg Lodha Heaven, Kalyan, Thane, Maharashtra
+S2 address: SHOP NO. C-18/1, KALYAN, MUMBAI, Maharashtra
+Address token Jaccard: 0.462
+S1 numbers: 18
+S2 numbers: 1,18
+
+--- MISS 36 ---
+S1 name: All Energy Private Limited
+S2 name: ऑल एनर्जी प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Plot No.234, L. K. Complex, Jagannathpuri, Jhotwara, Jaipur, Jaipur, Rajasthan
+S2 address: DOOR NO 234, JAIPUR, राजस्थान
+Address token Jaccard: 0.200
+S1 numbers: 234
+S2 numbers: 234
+
+--- MISS 37 ---
+S1 name: Apex Logistics Private Limited
+S2 name: એપેક્સ લોજિસ્ટિક્સ પ્રાઇવેટ લિમિટેડ
+Name token Jaccard: 0.000
+
+S1 address: Rajkot, Gujarat, Ranchhodnagar, Nr. Om Shanti Kendra, St. No. 17
+S2 address: ST. NO. 0017, RAJKOT, ગુજરાત
+Address token Jaccard: 0.214
+S1 numbers: 17
+S2 numbers: 0017
+
+--- MISS 38 ---
+S1 name: Gold Real Technology Private Limited
+S2 name: गोल्ड रियल टेक्नोलॉजी प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Room No.309, Sujata Shopping Centre, Navghar Road, Opp. Aradhana Bldg, Sector 3, Bhayander, (E), Thane, Maharashtra
+S2 address: PLOT 184 ROOM NO.309, THANE, Maharashtra
+Address token Jaccard: 0.263
+S1 numbers: 3,309
+S2 numbers: 184,309
+
+--- MISS 39 ---
+S1 name: Future Systems Private Limited
+S2 name: फ्यूचर सिस्टम्स प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: C-5, Bhagirath Colony, Chomu House, Jaipur, Rajasthan
+S2 address: C-5, JAIPUR, Rajasthan
+Address token Jaccard: 0.500
+S1 numbers: 5
+S2 numbers: 5
+
+--- MISS 40 ---
+S1 name: Ram Systems Private Limited
+S2 name: Ram Systems പ്രൈവറ്റ് ലിമിറ്റഡ്
+Name token Jaccard: 0.182
+
+S1 address: C/O Narayan Ponnappan, Iruthumkuziyil 10Th Mile Adimaly, Devikulam, Idukki, Kerala
+S2 address: 
+Address token Jaccard: 0.000
+S1 numbers: 10
+S2 numbers: 
+
+--- MISS 41 ---
+S1 name: Royal Silver Consultants Private Limited
+S2 name: রয়্যাল সিলভার কনসালট্যান্টস প্রাইভেট লিমিটেড
+Name token Jaccard: 0.000
+
+S1 address: P/13/B, C.I.T. Road, Scheme Vi-M(S) Beliaghata, Kolkata, Howrah, West Bengal
+S2 address: P/13/B, C.I.T. ROAD, SCHEME VI-M(S) BELIAGHATA, KOLKATA, BIDHANNAGAR, পশ্চিমবঙ্গ
+Address token Jaccard: 0.619
+S1 numbers: 13
+S2 numbers: 13
+
+--- MISS 42 ---
+S1 name: Focus Solution Limited
+S2 name: FOCUS SOLUTION LTD
+Name token Jaccard: 0.500
+
+S1 address: 29 A T Chatterjee Road, Kolkata, Howrah, West Bengal
+S2 address: H.NO 34 A T CHATTERJEE ROAD, KOLKATA, KOLKATA, West Bengal
+Address token Jaccard: 0.583
+S1 numbers: 29
+S2 numbers: 34
+
+--- MISS 43 ---
+S1 name: Faith Exports Limited
+S2 name: IRIFAYE
+Name token Jaccard: 0.000
+
+S1 address: F4, 6-2/269/1, 2Nd Floor, Classic Homes, Tirumalagiri, Hyderabad, Telangana
+S2 address: F4, HYDERABAD, TIRUMALAGIRI, Andhra Pradesh
+Address token Jaccard: 0.214
+S1 numbers: 1,2,269,4,6
+S2 numbers: 4
+
+--- MISS 44 ---
+S1 name: Pgs & Partners
+S2 name: PGS  &
+Name token Jaccard: 0.667
+
+S1 address: G-246, 3Rd Floor, Sector-63, G B Nagar, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 address: G-246, 3RD FLOOR, SECTOR-63, G B NAGAR, NOIDA, Uttar Pradesh
+Address token Jaccard: 0.846
+S1 numbers: 246,3,63
+S2 numbers: 246,3,63
+
+--- MISS 45 ---
+S1 name: Green Industries Private Limited
+S2 name: ગ્રીન ઇન્ડસ્ટ્રીઝ પ્રાઇવેટ લિમિટેડ
+Name token Jaccard: 0.000
+
+S1 address: Plot No. 60, Block No. 69, Vareli, Tal. Palsana, Surat, Gujarat
+S2 address: #60, TAL. PALSANA, ગુજરાત
+Address token Jaccard: 0.231
+S1 numbers: 60,69
+S2 numbers: 60
+
+--- MISS 46 ---
+S1 name: Krishna Jain Foods Private Limited
+S2 name: कृष्णा जैन फूड्स प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: Office No. 138, Tower A, Corenthum Tower A 41, Sector 62, Noida, Gautam Buddha Nagar, Uttar Pradesh
+S2 address: PLOT #197 OFFICE NO. 138, NOIDA, GAUTAM BUDDHA NAGAR, Uttar Pradesh
+Address token Jaccard: 0.529
+S1 numbers: 138,41,62
+S2 numbers: 138,197
+
+--- MISS 47 ---
+S1 name: Developers Super Technologies Private Limited
+S2 name: DSTECHNOLOGIES.COM
+Name token Jaccard: 0.000
+
+S1 address: S.No.260-1, Pno.31, Nagaon, Malegaon, Nashik, Maharashtra
+S2 address: S.NO.2-60-1, PNO.31, NAGAON, MALEGAON, CHANDANPURI, महाराष्ट्र
+Address token Jaccard: 0.412
+S1 numbers: 1,260,31
+S2 numbers: 1,2,31,60
+
+--- MISS 48 ---
+S1 name: Msm Nursing Home Private Limited
+S2 name: MSM NURSING HOME (PRIVATE)
+Name token Jaccard: 0.800
+
+S1 address: 515, 5 Floor, Tulsiani, Chamber, Freepressjournal, Mumbai, Maharashtra
+S2 address: 
+Address token Jaccard: 0.000
+S1 numbers: 5,515
+S2 numbers: 
+
+--- MISS 49 ---
+S1 name: Nandkishor (India) Foundation Private Limited
+S2 name: Private Nandkishor (India) Fonnadtien Limited
+Name token Jaccard: 0.667
+
+S1 address: 40, B.L Saha Road, Ground Floor, Kolkata, Kolkata, Howrah, West Bengal
+S2 address: 40, KOLKATA, HOWRAH, West Bengal
+Address token Jaccard: 0.455
+S1 numbers: 40
+S2 numbers: 40
+
+--- MISS 50 ---
+S1 name: Om Enterprises Private Limited
+S2 name: ओम एंटरप्राइजेज प्राइवेट लिमिटेड
+Name token Jaccard: 0.000
+
+S1 address: 3/258, Lucknow, Uttar Pradesh
+S2 address: DOOR NO 87 3/258, LUCKNOW, Uttar Pradesh
+Address token Jaccard: 0.625
+S1 numbers: 258,3
+S2 numbers: 258,3,87
+
+Total runtime: 869.02s

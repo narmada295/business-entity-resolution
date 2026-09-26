@@ -1,0 +1,18 @@
+Loading caches...
+Queries: 20,000
+True S2 links: 33,472
+
+=========================================================================================================
+ALL CACHED BLOCKERS
+=========================================================================================================
+Method                                              Recall    Avg Cand    Full Entity   Zero Recovery
+---------------------------------------------------------------------------------------------------------
+Name + Address                                     90.28%       39.21        84.09%          5.63%
+Name + Address + Structured                        94.08%       54.95        89.99%          3.39%
+Name + Address + Structured + Translit             94.22%       74.36        90.24%          3.32%
+
+Additional true links from transliteration beyond structured union: 46
+
+Final missed true links: 1,935
+Saved to:
+/home/mahaswint/amazon-ml/code/outputs/final_cached_blocking_misses.tsv

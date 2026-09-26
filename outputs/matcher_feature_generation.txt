@@ -1,0 +1,83 @@
+Loading candidate caches...
+Queries in caches: 20,000
+
+Loading S1 query records...
+S1 records loaded: 20,000
+
+Loading ground truth...
+True S2 links: 33,472
+
+Building candidate-pair index...
+Candidate pairs: 1,393,495
+Unique S2 candidate IDs: 685,255
+Index build time: 1.54s
+
+Streaming S2 and computing features...
+chunks=1   read=100,000 pairs=49,810 positives=627 elapsed=1.5schunks=2   read=200,000 pairs=90,271 positives=1,240 elapsed=3.2schunks=3   read=300,000 pairs=126,620 positives=1,882 elapsed=4.7schunks=4   read=400,000 pairs=160,776 positives=2,518 elapsed=6.2schunks=5   read=500,000 pairs=193,777 positives=3,150 elapsed=7.6schunks=6   read=600,000 pairs=225,760 positives=3,819 elapsed=9.1schunks=7   read=700,000 pairs=257,900 positives=4,450 elapsed=10.6schunks=8   read=800,000 pairs=289,036 positives=5,056 elapsed=11.9schunks=9   read=900,000 pairs=319,745 positives=5,664 elapsed=13.4schunks=10  read=1,000,000 pairs=349,939 positives=6,289 elapsed=14.6schunks=11  read=1,100,000 pairs=379,553 positives=6,880 elapsed=16.0schunks=12  read=1,200,000 pairs=409,330 positives=7,529 elapsed=17.4schunks=13  read=1,300,000 pairs=437,689 positives=8,163 elapsed=18.6schunks=14  read=1,400,000 pairs=465,911 positives=8,775 elapsed=20.0schunks=15  read=1,500,000 pairs=493,695 positives=9,402 elapsed=21.1schunks=16  read=1,600,000 pairs=520,879 positives=10,023 elapsed=22.5schunks=17  read=1,700,000 pairs=548,173 positives=10,644 elapsed=23.6schunks=18  read=1,800,000 pairs=576,289 positives=11,272 elapsed=25.0schunks=19  read=1,900,000 pairs=604,268 positives=11,920 elapsed=26.3schunks=20  read=2,000,000 pairs=631,236 positives=12,578 elapsed=27.5schunks=21  read=2,100,000 pairs=658,365 positives=13,228 elapsed=28.7schunks=22  read=2,200,000 pairs=685,203 positives=13,867 elapsed=29.8schunks=23  read=2,300,000 pairs=711,901 positives=14,479 elapsed=31.0schunks=24  read=2,400,000 pairs=738,131 positives=15,115 elapsed=32.1schunks=25  read=2,500,000 pairs=764,592 positives=15,746 elapsed=33.4schunks=26  read=2,600,000 pairs=790,636 positives=16,410 elapsed=34.5schunks=27  read=2,700,000 pairs=817,301 positives=17,042 elapsed=35.8schunks=28  read=2,800,000 pairs=843,007 positives=17,620 elapsed=36.8schunks=29  read=2,900,000 pairs=868,929 positives=18,252 elapsed=38.1schunks=30  read=3,000,000 pairs=895,222 positives=18,881 elapsed=39.2schunks=31  read=3,100,000 pairs=920,469 positives=19,510 elapsed=40.6schunks=32  read=3,200,000 pairs=945,943 positives=20,125 elapsed=41.7schunks=33  read=3,300,000 pairs=971,326 positives=20,739 elapsed=42.9schunks=34  read=3,400,000 pairs=996,537 positives=21,371 elapsed=44.0schunks=35  read=3,500,000 pairs=1,021,830 positives=22,005 elapsed=45.2schunks=36  read=3,600,000 pairs=1,046,879 positives=22,607 elapsed=46.3schunks=37  read=3,700,000 pairs=1,072,729 positives=23,237 elapsed=47.5schunks=38  read=3,800,000 pairs=1,097,523 positives=23,852 elapsed=48.6schunks=39  read=3,900,000 pairs=1,122,112 positives=24,530 elapsed=49.8schunks=40  read=4,000,000 pairs=1,146,377 positives=25,128 elapsed=50.8schunks=41  read=4,100,000 pairs=1,170,847 positives=25,771 elapsed=52.1schunks=42  read=4,200,000 pairs=1,195,306 positives=26,396 elapsed=53.1schunks=43  read=4,300,000 pairs=1,219,929 positives=27,031 elapsed=54.3schunks=44  read=4,400,000 pairs=1,243,516 positives=27,663 elapsed=55.3schunks=45  read=4,500,000 pairs=1,267,630 positives=28,319 elapsed=56.5schunks=46  read=4,600,000 pairs=1,291,280 positives=28,966 elapsed=57.6schunks=47  read=4,700,000 pairs=1,315,386 positives=29,616 elapsed=58.8schunks=48  read=4,800,000 pairs=1,338,312 positives=30,246 elapsed=59.8schunks=49  read=4,900,000 pairs=1,361,910 positives=30,870 elapsed=61.0schunks=50  read=5,000,000 pairs=1,385,486 positives=31,512 elapsed=62.0schunks=51  read=5,034,616 pairs=1,393,495 positives=31,738 elapsed=62.4s
+
+Feature rows written: 1,393,495
+Positive pairs: 31,738
+Negative pairs: 1,361,757
+Positive rate: 2.2776%
+Feature generation time: 62.73s
+
+Saved matcher dataset:
+/home/mahaswint/amazon-ml/code/outputs/matcher_features_s2_india_sample.parquet
+
+Reading feature summary...
+Rows: 1,393,495
+Columns: 32
+
+Columns:
+  source1_entity_id
+  candidate_entity_id
+  label
+  name_exact
+  name_ratio
+  name_token_sort
+  name_token_set
+  name_token_jaccard
+  name_length_ratio
+  translit_name_ratio
+  translit_name_token_sort
+  translit_name_token_set
+  address_exact
+  address_ratio
+  address_token_sort
+  address_token_set
+  address_token_jaccard
+  address_length_ratio
+  s1_address_missing
+  s2_address_missing
+  shared_number_count
+  number_jaccard
+  number_exact_set
+  both_have_numbers
+  from_name_blocker
+  from_address_blocker
+  from_structured_blocker
+  from_embedding_blocker
+  blocker_count
+  name_retrieval_score
+  address_retrieval_score
+  embedding_rank
+
+Label distribution:
+label
+0    1361757
+1      31738
+Name: count, dtype: int64
+
+Mean features by label:
+label                           0         1
+name_ratio               0.532458  0.688553
+name_token_set           0.585791  0.750710
+translit_name_token_set  0.633426  0.866504
+address_ratio            0.475692  0.815069
+address_token_set        0.575554  0.937207
+address_token_jaccard    0.175410  0.762377
+shared_number_count      0.461885  1.708079
+number_jaccard           0.143415  0.774381
+blocker_count            1.046016  2.373054
+
+Total runtime: 72.41s

@@ -1,0 +1,57 @@
+Reduced fuzzy-blocking experiment
+Country: India
+Sample size: 20,000
+K values: [5, 10, 20]
+Hash features: 262,144
+
+Loading India validation S1 records...
+India validation entities: 176,736
+Sampled queries: 20,000
+Load + sample time: 5.25s
+
+Loading ground truth for sample...
+True S2 links for sampled India entities: 33,472
+Sampled S1 with >=1 S2 match: 17,364
+Truth load time: 2.15s
+
+Building query vectors...
+Query matrix: (20000, 262144)
+Query nnz: 862,466
+Query vectorization time: 0.18s
+
+Streaming complete S2 corpus...
+Chunks=1   read=100,000 India=40,064 elapsed=5.2sChunks=2   read=200,000 India=80,432 elapsed=10.5sChunks=3   read=300,000 India=120,536 elapsed=15.6sChunks=4   read=400,000 India=160,461 elapsed=20.8sChunks=5   read=500,000 India=200,531 elapsed=26.0sChunks=6   read=600,000 India=240,976 elapsed=31.2sChunks=7   read=700,000 India=280,868 elapsed=36.3sChunks=8   read=800,000 India=320,793 elapsed=41.4sChunks=9   read=900,000 India=361,045 elapsed=46.6sChunks=10  read=1,000,000 India=400,819 elapsed=51.7sChunks=11  read=1,100,000 India=440,597 elapsed=56.7sChunks=12  read=1,200,000 India=480,826 elapsed=61.9sChunks=13  read=1,300,000 India=520,849 elapsed=67.0sChunks=14  read=1,400,000 India=561,239 elapsed=72.2sChunks=15  read=1,500,000 India=601,135 elapsed=77.3sChunks=16  read=1,600,000 India=640,882 elapsed=82.3sChunks=17  read=1,700,000 India=680,693 elapsed=87.3sChunks=18  read=1,800,000 India=720,557 elapsed=92.4sChunks=19  read=1,900,000 India=760,822 elapsed=97.5sChunks=20  read=2,000,000 India=800,924 elapsed=102.6sChunks=21  read=2,100,000 India=840,817 elapsed=107.7sChunks=22  read=2,200,000 India=880,925 elapsed=112.8sChunks=23  read=2,300,000 India=921,048 elapsed=117.9sChunks=24  read=2,400,000 India=961,121 elapsed=123.0sChunks=25  read=2,500,000 India=1,001,290 elapsed=128.1sChunks=26  read=2,600,000 India=1,041,462 elapsed=133.2sChunks=27  read=2,700,000 India=1,081,449 elapsed=138.4sChunks=28  read=2,800,000 India=1,121,618 elapsed=143.5sChunks=29  read=2,900,000 India=1,161,838 elapsed=148.6sChunks=30  read=3,000,000 India=1,202,006 elapsed=153.7sChunks=31  read=3,100,000 India=1,242,080 elapsed=158.8sChunks=32  read=3,200,000 India=1,282,119 elapsed=163.9sChunks=33  read=3,300,000 India=1,322,261 elapsed=169.0sChunks=34  read=3,400,000 India=1,362,603 elapsed=174.1sChunks=35  read=3,500,000 India=1,402,592 elapsed=179.2sChunks=36  read=3,600,000 India=1,442,606 elapsed=184.3sChunks=37  read=3,700,000 India=1,482,817 elapsed=189.4sChunks=38  read=3,800,000 India=1,522,939 elapsed=194.5sChunks=39  read=3,900,000 India=1,563,315 elapsed=199.7sChunks=40  read=4,000,000 India=1,603,607 elapsed=204.9sChunks=41  read=4,100,000 India=1,643,570 elapsed=210.1sChunks=42  read=4,200,000 India=1,683,669 elapsed=215.2sChunks=43  read=4,300,000 India=1,723,507 elapsed=220.3sChunks=44  read=4,400,000 India=1,763,601 elapsed=225.4sChunks=45  read=4,500,000 India=1,803,696 elapsed=230.6sChunks=46  read=4,600,000 India=1,843,411 elapsed=235.6sChunks=47  read=4,700,000 India=1,883,444 elapsed=240.8sChunks=48  read=4,800,000 India=1,923,560 elapsed=245.9sChunks=49  read=4,900,000 India=1,963,734 elapsed=251.0sChunks=50  read=5,000,000 India=2,003,911 elapsed=256.1sChunks=51  read=5,034,616 India=2,017,799 elapsed=258.1s
+
+S2 India searched: 2,017,799
+Corpus search time: 258.15s
+
+
+================================================================================
+S2 INDIA HASHING NAME BLOCKER
+================================================================================
+Queries: 20,000
+True S2 links: 33,472
+Entities with >=1 S2 match: 17,364
+
+K=5
+  Recovered links: 12,867 / 33,472
+  Pair recall: 38.4411%
+  Full entity recovery: 4,468 (25.73%)
+  Partial entity recovery: 4,412
+  Zero entity recovery: 8,484 (48.86%)
+
+K=10
+  Recovered links: 14,311 / 33,472
+  Pair recall: 42.7551%
+  Full entity recovery: 5,106 (29.41%)
+  Partial entity recovery: 4,461
+  Zero entity recovery: 7,797 (44.90%)
+
+K=20
+  Recovered links: 15,436 / 33,472
+  Pair recall: 46.1162%
+  Full entity recovery: 5,649 (32.53%)
+  Partial entity recovery: 4,449
+  Zero entity recovery: 7,266 (41.85%)
+
+Total runtime: 266.77s

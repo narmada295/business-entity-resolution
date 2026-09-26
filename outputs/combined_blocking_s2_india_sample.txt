@@ -1,0 +1,45 @@
+Combined S2 India blocking experiment
+Sample size: 20,000
+Fuzzy K: 20
+
+Loading validation S1...
+India validation entities: 176,736
+Sampled queries: 20,000
+Normalizing query data...
+
+Loading sample ground truth...
+True S2 links: 33,472
+Entities with >=1 S2 match: 17,364
+
+Building query vectors...
+Name query nnz: 862,466
+Address query nnz: 2,704,718
+chunks=1   read=100,000 India=40,064 elapsed=17.8schunks=2   read=200,000 India=80,432 elapsed=35.7schunks=3   read=300,000 India=120,536 elapsed=52.7schunks=4   read=400,000 India=160,461 elapsed=69.7schunks=5   read=500,000 India=200,531 elapsed=86.8schunks=6   read=600,000 India=240,976 elapsed=103.9schunks=7   read=700,000 India=280,868 elapsed=120.8schunks=8   read=800,000 India=320,793 elapsed=137.8schunks=9   read=900,000 India=361,045 elapsed=154.8schunks=10  read=1,000,000 India=400,819 elapsed=171.6schunks=11  read=1,100,000 India=440,597 elapsed=188.3schunks=12  read=1,200,000 India=480,826 elapsed=205.2schunks=13  read=1,300,000 India=520,849 elapsed=222.0schunks=14  read=1,400,000 India=561,239 elapsed=239.0schunks=15  read=1,500,000 India=601,135 elapsed=255.8schunks=16  read=1,600,000 India=640,882 elapsed=272.5schunks=17  read=1,700,000 India=680,693 elapsed=289.2schunks=18  read=1,800,000 India=720,557 elapsed=306.0schunks=19  read=1,900,000 India=760,822 elapsed=323.1schunks=20  read=2,000,000 India=800,924 elapsed=340.0schunks=21  read=2,100,000 India=840,817 elapsed=356.7schunks=22  read=2,200,000 India=880,925 elapsed=373.7schunks=23  read=2,300,000 India=921,048 elapsed=390.5schunks=24  read=2,400,000 India=961,121 elapsed=407.3schunks=25  read=2,500,000 India=1,001,290 elapsed=424.2schunks=26  read=2,600,000 India=1,041,462 elapsed=441.1schunks=27  read=2,700,000 India=1,081,449 elapsed=457.9schunks=28  read=2,800,000 India=1,121,618 elapsed=474.7schunks=29  read=2,900,000 India=1,161,838 elapsed=491.7schunks=30  read=3,000,000 India=1,202,006 elapsed=508.5schunks=31  read=3,100,000 India=1,242,080 elapsed=525.5schunks=32  read=3,200,000 India=1,282,119 elapsed=542.3schunks=33  read=3,300,000 India=1,322,261 elapsed=559.2schunks=34  read=3,400,000 India=1,362,603 elapsed=576.1schunks=35  read=3,500,000 India=1,402,592 elapsed=593.0schunks=36  read=3,600,000 India=1,442,606 elapsed=609.9schunks=37  read=3,700,000 India=1,482,817 elapsed=627.0schunks=38  read=3,800,000 India=1,522,939 elapsed=644.2schunks=39  read=3,900,000 India=1,563,315 elapsed=661.9schunks=40  read=4,000,000 India=1,603,607 elapsed=679.1schunks=41  read=4,100,000 India=1,643,570 elapsed=696.0schunks=42  read=4,200,000 India=1,683,669 elapsed=713.0schunks=43  read=4,300,000 India=1,723,507 elapsed=730.0schunks=44  read=4,400,000 India=1,763,601 elapsed=746.9schunks=45  read=4,500,000 India=1,803,696 elapsed=763.9schunks=46  read=4,600,000 India=1,843,411 elapsed=780.9schunks=47  read=4,700,000 India=1,883,444 elapsed=797.9schunks=48  read=4,800,000 India=1,923,560 elapsed=814.9schunks=49  read=4,900,000 India=1,963,734 elapsed=831.8schunks=50  read=5,000,000 India=2,003,911 elapsed=848.8schunks=51  read=5,034,616 India=2,017,799 elapsed=855.1s
+
+S2 India searched: 2,017,799
+Search time: 855.12s
+
+
+====================================================================================================
+COMBINED BLOCKING RESULTS
+====================================================================================================
+Method                              Recall    Avg Cand    Full Entity   Zero Recovery
+----------------------------------------------------------------------------------------------------
+Exact                              24.38%        1.59        13.31%         63.29%
+Name K=20                          46.12%       20.00        32.53%         41.85%
+Address K=20                       83.99%       20.00        74.94%          9.30%
+Exact + Name                       52.43%       20.17        38.12%         35.16%
+Exact + Address                    85.95%       21.18        77.42%          7.98%
+Name + Address                     90.28%       39.21        84.09%          5.63%
+Exact + Name + Address             90.28%       39.24        84.09%          5.63%
+
+================================================================================
+UNIQUE TRUE LINKS CONTRIBUTED
+================================================================================
+Exact only: 0
+Name only: 1449
+Address only: 12669
+Name adds beyond address: 2103
+Address adds beyond name: 14781
+
+Total runtime: 864.83s

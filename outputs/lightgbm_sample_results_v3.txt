@@ -1,0 +1,237 @@
+Loading matcher feature dataset...
+Pairs: 1,393,495
+Entities: 20,000
+
+Loading COMPLETE S2 ground truth...
+Full S2 truth links: 33,472
+Entities with zero S2 matches: 2,636
+Matcher train entities: 14,000
+Matcher validation entities: 6,000
+
+Train candidate pairs: 975,509
+Validation candidate pairs: 417,986
+Train positives: 22,237
+Validation positives: 9,501
+Train positive rate: 2.2795%
+Validation positive rate: 2.2730%
+
+=================================================================
+CANDIDATE-SET ORACLE
+=================================================================
+Validation truth links: 10,014
+True links present in candidates: 9,501
+Pair blocking recall: 94.8772%
+Oracle macro F0.5: 0.966866
+Full entity recovery: 4,777 (91.13%)
+Partial entity recovery: 307
+Zero entity recovery: 158 (3.01%)
+
+Model features: 66
+  name_exact
+  name_ratio
+  name_token_sort
+  name_token_set
+  name_token_jaccard
+  name_length_ratio
+  name_token_count_s1
+  name_token_count_s2
+  shared_name_token_count
+  s1_name_containment
+  s2_name_containment
+  meaningful_name_token_count_s1
+  meaningful_name_token_count_s2
+  shared_meaningful_name_tokens
+  extra_meaningful_tokens_s1
+  extra_meaningful_tokens_s2
+  meaningful_s1_containment
+  meaningful_s2_containment
+  legal_suffix_stripped_ratio
+  legal_suffix_stripped_token_set
+  name_char_3gram_jaccard
+  translit_name_ratio
+  translit_name_token_sort
+  translit_name_token_set
+  address_exact
+  address_ratio
+  address_token_sort
+  address_token_set
+  address_token_jaccard
+  address_length_ratio
+  s1_address_missing
+  s2_address_missing
+  shared_number_count
+  number_jaccard
+  number_exact_set
+  both_have_numbers
+  number_conflict
+  ordered_number_exact
+  first_number_match
+  first_number_conflict
+  strong_address_weak_name
+  strong_name_weak_address
+  address_number_agreement
+  high_address_low_name
+  translit_rescue
+  translit_address_rescue
+  strong_address_number_name_conflict
+  strong_name_number_conflict
+  address_x_number
+  address_set_x_number
+  name_x_address
+  name_jaccard_x_address_jaccard
+  translit_x_address
+  translit_ratio_x_address_jaccard
+  meaningful_name_x_address
+  name_address_min
+  name_address_max
+  name_address_abs_diff
+  from_name_blocker
+  from_address_blocker
+  from_structured_blocker
+  from_embedding_blocker
+  blocker_count
+  name_retrieval_score
+  address_retrieval_score
+  embedding_rank
+
+Training LightGBM...
+[LightGBM] [Info] Number of positive: 22237, number of negative: 953272
+[LightGBM] [Info] Total Bins 7171
+[LightGBM] [Info] Number of data points in the train set: 975509, number of used features: 65
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.022795 -> initscore=-3.758143
+[LightGBM] [Info] Start training from score -3.758143
+Training until validation scores don't improve for 100 rounds
+[50]	valid_0's binary_logloss: 0.0112591
+[100]	valid_0's binary_logloss: 0.00733478
+[150]	valid_0's binary_logloss: 0.00648762
+[200]	valid_0's binary_logloss: 0.00623881
+[250]	valid_0's binary_logloss: 0.00611219
+[300]	valid_0's binary_logloss: 0.00605255
+[350]	valid_0's binary_logloss: 0.00601296
+[400]	valid_0's binary_logloss: 0.00597416
+[450]	valid_0's binary_logloss: 0.00596819
+[500]	valid_0's binary_logloss: 0.0059607
+[550]	valid_0's binary_logloss: 0.00596727
+[600]	valid_0's binary_logloss: 0.00599003
+Early stopping, best iteration is:
+[530]	valid_0's binary_logloss: 0.00595929
+
+Pairwise diagnostics:
+ROC-AUC: 0.999657
+PR-AUC: 0.989896
+
+Tuning threshold on ENTITY-LEVEL macro F0.5...
+
+ Threshold     Macro F0.5   Predicted links
+---------------------------------------------
+      0.42       0.912109             9,305
+      0.41       0.912093             9,325
+      0.40       0.912092             9,346
+      0.46       0.911904             9,245
+      0.51       0.911611             9,166
+      0.45       0.911579             9,263
+      0.43       0.911515             9,291
+      0.44       0.911452             9,276
+      0.56       0.911363             9,094
+      0.52       0.911258             9,150
+      0.57       0.911253             9,077
+      0.50       0.911251             9,185
+      0.47       0.911227             9,228
+      0.55       0.911074             9,113
+      0.54       0.910979             9,124
+
+Best threshold: 0.42
+Best validation macro F0.5: 0.912109
+Predicted links at best threshold: 9,305
+
+Fine-tuned threshold: 0.418
+Fine-tuned validation macro F0.5: 0.912292
+Predicted links: 9,311
+
+=================================================================
+MODEL VS CANDIDATE ORACLE
+=================================================================
+Candidate oracle F0.5: 0.966866
+LightGBM best F0.5:    0.912292
+Matcher gap to oracle: 0.054574
+Fraction of oracle score achieved: 94.36%
+
+============================================================
+FEATURE IMPORTANCE
+============================================================
+                            feature  importance
+                  name_length_ratio        2025
+                translit_name_ratio        2007
+        legal_suffix_stripped_ratio        1655
+            name_char_3gram_jaccard        1628
+               address_length_ratio        1364
+           translit_name_token_sort        1353
+                         name_ratio        1273
+    legal_suffix_stripped_token_set        1208
+                      address_ratio        1035
+            address_retrieval_score        1013
+               name_retrieval_score        1007
+              address_token_jaccard         981
+                 address_token_sort         959
+            translit_name_token_set         889
+   translit_ratio_x_address_jaccard         858
+                name_token_count_s2         849
+                    name_token_sort         805
+              name_address_abs_diff         761
+                   name_address_max         760
+                     name_token_set         758
+               address_set_x_number         751
+                 translit_x_address         712
+                   address_x_number         658
+                  address_token_set         610
+          meaningful_name_x_address         569
+     name_jaccard_x_address_jaccard         531
+                shared_number_count         490
+                name_token_count_s1         488
+                     name_x_address         443
+     meaningful_name_token_count_s2         377
+                 name_token_jaccard         369
+                s1_name_containment         339
+                s2_name_containment         337
+                   name_address_min         335
+                     number_jaccard         325
+         extra_meaningful_tokens_s2         241
+                      blocker_count         239
+          meaningful_s2_containment         166
+                     embedding_rank         159
+            from_structured_blocker         136
+                    number_conflict         133
+     meaningful_name_token_count_s1         133
+      shared_meaningful_name_tokens         118
+          meaningful_s1_containment         115
+                 first_number_match         113
+                  both_have_numbers         112
+         extra_meaningful_tokens_s1         110
+            shared_name_token_count         104
+              first_number_conflict         100
+               ordered_number_exact          94
+             from_embedding_blocker          56
+            translit_address_rescue          52
+                   number_exact_set          48
+           strong_address_weak_name          21
+        strong_name_number_conflict          14
+                    translit_rescue          13
+               from_address_blocker          11
+                  from_name_blocker          11
+                      address_exact           9
+              high_address_low_name           9
+strong_address_number_name_conflict           7
+           address_number_agreement           5
+           strong_name_weak_address           5
+                         name_exact           2
+                 s2_address_missing           2
+                 s1_address_missing           0
+
+Saved model:
+/home/mahaswint/amazon-ml/code/outputs/lightgbm_matcher_sample.txt
+
+Saved validation predictions:
+/home/mahaswint/amazon-ml/code/outputs/lightgbm_validation_predictions.parquet
+
+Saved feature importance:
+/home/mahaswint/amazon-ml/code/outputs/lightgbm_feature_importance.csv

@@ -1,0 +1,30 @@
+Loading same 20k query sample...
+Queries loaded: 20,000
+Normalizing query names/addresses...
+True S2 links: 33,472
+
+Building structured indexes...
+Useful numbers: 2,148
+Useful tokens: 25,468
+
+Generating structured top-100 pool...
+chunks=1   read=100,000 India=40,064 elapsed=14.7schunks=2   read=200,000 India=80,432 elapsed=29.2schunks=3   read=300,000 India=120,536 elapsed=41.1schunks=4   read=400,000 India=160,461 elapsed=53.0schunks=5   read=500,000 India=200,531 elapsed=63.9schunks=6   read=600,000 India=240,976 elapsed=74.6schunks=7   read=700,000 India=280,868 elapsed=85.3schunks=8   read=800,000 India=320,793 elapsed=96.2schunks=9   read=900,000 India=361,045 elapsed=107.2schunks=10  read=1,000,000 India=400,819 elapsed=117.9schunks=11  read=1,100,000 India=440,597 elapsed=128.4schunks=12  read=1,200,000 India=480,826 elapsed=139.0schunks=13  read=1,300,000 India=520,849 elapsed=150.1schunks=14  read=1,400,000 India=561,239 elapsed=161.1schunks=15  read=1,500,000 India=601,135 elapsed=171.6schunks=16  read=1,600,000 India=640,882 elapsed=182.3schunks=17  read=1,700,000 India=680,693 elapsed=192.9schunks=18  read=1,800,000 India=720,557 elapsed=203.5schunks=19  read=1,900,000 India=760,822 elapsed=214.2schunks=20  read=2,000,000 India=800,924 elapsed=224.8schunks=21  read=2,100,000 India=840,817 elapsed=235.2schunks=22  read=2,200,000 India=880,925 elapsed=245.8schunks=23  read=2,300,000 India=921,048 elapsed=256.2schunks=24  read=2,400,000 India=961,121 elapsed=267.0schunks=25  read=2,500,000 India=1,001,290 elapsed=277.6schunks=26  read=2,600,000 India=1,041,462 elapsed=288.1schunks=27  read=2,700,000 India=1,081,449 elapsed=298.5schunks=28  read=2,800,000 India=1,121,618 elapsed=308.9schunks=29  read=2,900,000 India=1,161,838 elapsed=319.4schunks=30  read=3,000,000 India=1,202,006 elapsed=330.2schunks=31  read=3,100,000 India=1,242,080 elapsed=340.9schunks=32  read=3,200,000 India=1,282,119 elapsed=351.7schunks=33  read=3,300,000 India=1,322,261 elapsed=362.2schunks=34  read=3,400,000 India=1,362,603 elapsed=372.8schunks=35  read=3,500,000 India=1,402,592 elapsed=383.7schunks=36  read=3,600,000 India=1,442,606 elapsed=394.3schunks=37  read=3,700,000 India=1,482,817 elapsed=404.9schunks=38  read=3,800,000 India=1,522,939 elapsed=415.6schunks=39  read=3,900,000 India=1,563,315 elapsed=426.0schunks=40  read=4,000,000 India=1,603,607 elapsed=436.4schunks=41  read=4,100,000 India=1,643,570 elapsed=446.8schunks=42  read=4,200,000 India=1,683,669 elapsed=457.3schunks=43  read=4,300,000 India=1,723,507 elapsed=467.7schunks=44  read=4,400,000 India=1,763,601 elapsed=478.9schunks=45  read=4,500,000 India=1,803,696 elapsed=489.6schunks=46  read=4,600,000 India=1,843,411 elapsed=500.0schunks=47  read=4,700,000 India=1,883,444 elapsed=510.5schunks=48  read=4,800,000 India=1,923,560 elapsed=521.2schunks=49  read=4,900,000 India=1,963,734 elapsed=531.7schunks=50  read=5,000,000 India=2,003,911 elapsed=542.5schunks=51  read=5,034,616 India=2,017,799 elapsed=546.2s
+
+Generation time: 546.31s
+
+Reranking structured pools...
+
+Saving reranked cache:
+/home/mahaswint/amazon-ml/code/outputs/s2_india_structured_reranked_candidates.pkl
+
+
+==============================================================================================================
+STRUCTURED TOP100 -> RERANK -> TOP25
+==============================================================================================================
+Method                                                Recall    Avg Cand    Full Entity   Zero Recovery
+--------------------------------------------------------------------------------------------------------------
+Name + Char Address                                  90.28%       39.21        84.09%          5.63%
+Reranked Structured K25                              89.14%       24.99        82.43%          6.29%
+Name + Char Address + Reranked Structured            94.45%       60.03        90.60%          3.18%
+
+Total runtime: 572.02s

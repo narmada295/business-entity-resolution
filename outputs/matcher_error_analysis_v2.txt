@@ -1,0 +1,140 @@
+Loading feature table...
+Feature rows: 1,393,495
+
+Loading validation predictions...
+Validation prediction rows: 417,986
+Merged validation rows: 417,986
+
+Using threshold: 0.527
+
+True positives: 8,879
+False negatives: 622
+False positives: 242
+True negatives: 408,243
+
+Loading original S1 records...
+S1 records loaded: 766
+
+Loading original S2 records...
+chunks=1   read=100,000 found=14/862chunks=2   read=200,000 found=31/862chunks=3   read=300,000 found=49/862chunks=4   read=400,000 found=62/862chunks=5   read=500,000 found=84/862chunks=6   read=600,000 found=101/862chunks=7   read=700,000 found=118/862chunks=8   read=800,000 found=134/862chunks=9   read=900,000 found=153/862chunks=10  read=1,000,000 found=165/862chunks=11  read=1,100,000 found=184/862chunks=12  read=1,200,000 found=211/862chunks=13  read=1,300,000 found=227/862chunks=14  read=1,400,000 found=239/862chunks=15  read=1,500,000 found=255/862chunks=16  read=1,600,000 found=269/862chunks=17  read=1,700,000 found=286/862chunks=18  read=1,800,000 found=294/862chunks=19  read=1,900,000 found=307/862chunks=20  read=2,000,000 found=329/862chunks=21  read=2,100,000 found=347/862chunks=22  read=2,200,000 found=368/862chunks=23  read=2,300,000 found=390/862chunks=24  read=2,400,000 found=407/862chunks=25  read=2,500,000 found=425/862chunks=26  read=2,600,000 found=443/862chunks=27  read=2,700,000 found=462/862chunks=28  read=2,800,000 found=472/862chunks=29  read=2,900,000 found=487/862chunks=30  read=3,000,000 found=506/862chunks=31  read=3,100,000 found=527/862chunks=32  read=3,200,000 found=542/862chunks=33  read=3,300,000 found=566/862chunks=34  read=3,400,000 found=587/862chunks=35  read=3,500,000 found=604/862chunks=36  read=3,600,000 found=622/862chunks=37  read=3,700,000 found=646/862chunks=38  read=3,800,000 found=659/862chunks=39  read=3,900,000 found=682/862chunks=40  read=4,000,000 found=701/862chunks=41  read=4,100,000 found=723/862chunks=42  read=4,200,000 found=741/862chunks=43  read=4,300,000 found=752/862chunks=44  read=4,400,000 found=769/862chunks=45  read=4,500,000 found=787/862chunks=46  read=4,600,000 found=803/862chunks=47  read=4,700,000 found=821/862chunks=48  read=4,800,000 found=839/862chunks=49  read=4,900,000 found=850/862chunks=50  read=5,000,000 found=858/862chunks=51  read=5,034,616 found=862/862
+S2 records loaded: 862
+
+MATCHER ERROR ANALYSIS
+======================================================================
+Threshold: 0.527
+Validation pairs: 417,986
+True positives: 8,879
+False negatives: 622
+False positives: 242
+True negatives: 408,243
+
+FALSE NEGATIVES
+---------------
+Rows: 622
+probability                  mean=0.2133 median=0.1894 p25=0.0655 p75=0.3526
+name_ratio                   mean=0.5910 median=0.7009 p25=0.1590 p75=0.8818
+name_token_set               mean=0.6587 median=0.8571 p25=0.1788 p75=1.0000
+name_token_jaccard           mean=0.4266 median=0.5000 p25=0.0000 p75=0.6667
+translit_name_ratio          mean=0.7146 median=0.7248 p25=0.5600 p75=0.8836
+translit_name_token_set      mean=0.7675 median=0.8596 p25=0.5679 p75=1.0000
+address_ratio                mean=0.4983 median=0.5922 p25=0.0000 p75=0.8321
+address_token_set            mean=0.6191 median=0.8800 p25=0.0000 p75=0.9730
+address_token_jaccard        mean=0.4076 median=0.4167 p25=0.0000 p75=0.7143
+shared_number_count          mean=0.7958 median=0.0000 p25=0.0000 p75=1.0000
+number_jaccard               mean=0.2984 median=0.0000 p25=0.0000 p75=0.5750
+name_length_ratio            mean=0.8363 median=0.8800 p25=0.7500 p75=1.0000
+address_length_ratio         mean=0.5507 median=0.7154 p25=0.0000 p75=0.9344
+blocker_count                mean=1.5450 median=1.0000 p25=1.0000 p75=2.0000
+
+Buckets:
+name_ratio >= 0.8                   249 ( 40.03%)
+translit_name_ratio >= 0.8          252 ( 40.51%)
+address_ratio >= 0.8                191 ( 30.71%)
+address_token_jaccard >= 0.5        278 ( 44.69%)
+number_jaccard >= 0.5               213 ( 34.24%)
+shared number                       278 ( 44.69%)
+missing S2 address                  200 ( 32.15%)
+name blocker                        268 ( 43.09%)
+address blocker                     318 ( 51.13%)
+structured blocker                  335 ( 53.86%)
+embedding blocker                    40 (  6.43%)
+
+FALSE POSITIVES
+---------------
+Rows: 242
+probability                  mean=0.7606 median=0.7587 p25=0.6249 p75=0.8880
+name_ratio                   mean=0.5635 median=0.6948 p25=0.1294 p75=0.8571
+name_token_set               mean=0.6235 median=0.8377 p25=0.1410 p75=0.9399
+name_token_jaccard           mean=0.3694 median=0.4286 p25=0.0000 p75=0.6000
+translit_name_ratio          mean=0.6997 median=0.7260 p25=0.6032 p75=0.8604
+translit_name_token_set      mean=0.7490 median=0.8468 p25=0.5882 p75=0.9518
+address_ratio                mean=0.6909 median=0.7876 p25=0.5855 p75=0.9076
+address_token_set            mean=0.8332 median=0.9556 p25=0.8894 p75=1.0000
+address_token_jaccard        mean=0.6116 median=0.6667 p25=0.4563 p75=0.8451
+shared_number_count          mean=1.2769 median=1.0000 p25=0.0000 p75=2.0000
+number_jaccard               mean=0.5398 median=0.5000 p25=0.0000 p75=1.0000
+name_length_ratio            mean=0.8356 median=0.8929 p25=0.7906 p75=0.9677
+address_length_ratio         mean=0.7426 median=0.8784 p25=0.6162 p75=0.9709
+blocker_count                mean=1.9215 median=2.0000 p25=1.2500 p75=2.0000
+
+Buckets:
+name_ratio >= 0.8                    89 ( 36.78%)
+translit_name_ratio >= 0.8           90 ( 37.19%)
+address_ratio >= 0.8                118 ( 48.76%)
+address_token_jaccard >= 0.5        175 ( 72.31%)
+number_jaccard >= 0.5               155 ( 64.05%)
+shared number                       172 ( 71.07%)
+missing S2 address                   29 ( 11.98%)
+name blocker                         77 ( 31.82%)
+address blocker                     188 ( 77.69%)
+structured blocker                  187 ( 77.27%)
+embedding blocker                    13 (  5.37%)
+
+NEAR-THRESHOLD ERRORS
+------------------------------
+FN probability >= 0.30: 216
+FP probability <= 0.60: 43
+
+HIGH-CONFIDENCE MISTAKES
+------------------------------
+FN probability <= 0.05: 134
+FP probability >= 0.90: 55
+
+Saved false negatives:
+/home/mahaswint/amazon-ml/code/outputs/matcher_false_negatives.csv
+
+Saved false positives:
+/home/mahaswint/amazon-ml/code/outputs/matcher_false_positives.csv
+
+Saved summary:
+/home/mahaswint/amazon-ml/code/outputs/matcher_error_summary.txt
+
+================================================================================
+10 MOST CONFIDENT FALSE NEGATIVES
+================================================================================
+source1_entity_id candidate_entity_id  probability                   s1_business_name                           s2_business_name                                                                                                                   s1_business_address                                                                             s2_business_address  translit_name_ratio  address_token_jaccard  number_jaccard
+     S1-858579802        S2-509566585     0.000016                 South & Associates                          Mr Synciravantage                                      #86 Shubhodaya 3Rd Floor, Kumara Park West, Seshadripuram, Bangalore North, Bangalore, Karnataka                            H.NO 8-6 SHUBHODAYA 3RD FLOOR, BANGALORE NORTH, BANGALORE, Karnataka             0.378378               0.400000        0.250000
+     S1-409533878         S2-87176842     0.000028     Alpha Software Private Limited      ആൽഫ സോഫ്റ്റ്‌വെയർ പ്രൈവറ്റ് ലിമിറ്റഡ്                                                               Cp. Ix/107H, Cheruvathur, Sreevalsam Complex, Hosdurg, Kasargod, Kerala                                                       CP. IX/1-07H, KASARGODE, Kerala, KASARGOD             0.558824               0.333333        0.000000
+     S1-934391311        S2-198614746     0.000180                      Yavatmal Club                                  yclub.com                                                                                  Maharashtra, Yavatmal, Yeotamal, Aftabdhamangaonroad                                                 AFTABDHAMANGAONROAD, YAVATMAL, NULL, महाराष्ट्र             0.454545               0.222222        0.000000
+      S1-79489962        S2-321980335     0.000188             Surya Software Pvt Ltd    സൂര്യ സോഫ്റ്റ്‌വെയർ പ്രൈവറ്റ് ലിമിറ്റഡ്                                            C/O Mohammedkutty Haji, Door No 10/210Bp, Kavilpadi, Ponani, Malappuram, Malapuram, Kerala                                 Keralam, H.NO 170 C/O MOHAMMEDKUTTY HAJI, MALAPPURAM, MALAPURAM             0.491803               0.437500        0.000000
+      S1-34649272        S2-115551573     0.000245        Promise Consultancy Limited                  Pr0mise Limited  Services #7, Nhai Complex, Near A2B Restaurant, Nh44, Bangalore To Chinnar Highway, Chinn, Ar, Shoolagiri, Krishnagiri, Dharmapuri, Tamil Nadu                                                          #7, KRISHNAGIRI, DHARMAPURI, தமிழ்நாடு             0.549020               0.136364        0.333333
+     S1-970594705        S2-434811986     0.000338 Dynamic Properties Private Limited    டைனமிக் புராப்பர்ட்டீஸ் Private Limited                                                              47 & 48, 1St Floor, K.K Lane No.2, Avinashi Road, Coimbatore, Tamil Nadu                                                      COIMBATORE, 47 & 48, COIMBATORE, தமிழ்நாடு             0.710526               0.222222        0.500000
+     S1-639854056        S2-599895670     0.000384                     Rajputana & Co                 Shri RAJPUTANA CO SERVICES                                                                                  Madhya Pradesh, Indore, 11/D Nandbagh, 613 Nand Bagh                                                                                                             0.571429               0.000000        0.000000
+     S1-650153717        S2-289540862     0.000416      Fortune Constructions Pvt Ltd ഫോർച്യൂൺ കൺസ്ട്രക്ഷൻസ് പ്രൈവറ്റ് ലിമിറ്റഡ്                                                   Aluva, Ground Floor Door No.Xix/106 Royal Plaza, Ernakulam, Kerala, Bank Juncti, On  DOOR NO 28 GROUND FLOOR DOOR NO.XIX/106 ROYAL PLAZA, BANK JUNCTI, ON, ALUVA, ERNAKULAM, Kerala             0.382353               0.933333        0.500000
+     S1-539975546        S2-520459949     0.000440          Delhi Consultancy Pvt Ltd                     De1hi Pvt Ltd Sérvices                                Rz-8H/10, Gali No. 5/10, Main Sagar Pur, Nangal Raya, South West Delhi, Delhi, South West Delhi, Delhi RZ-8H/10, GALI NO. 5/10, MAIN SAGAR PUR, NANGAL RAYA, SOUTH WEST DELHI, SOUTH WEST DELHI, Delhi             0.510638               1.000000        1.000000
+      S1-84044412        S2-606090470     0.000529                      High Software                              हाई सॉफ्टवेयर                                                                   Plot No. 162, East Part, Heerapura, Vikash Nagar, Jaipur, Rajasthan                                                                   JAIPUR, 16, JAIPUR, Rajasthan             0.466667               0.181818        0.000000
+
+================================================================================
+10 MOST CONFIDENT FALSE POSITIVES
+================================================================================
+source1_entity_id candidate_entity_id  probability                      s1_business_name                   s2_business_name                                                                                              s1_business_address                                                                                                s2_business_address  translit_name_ratio  address_token_jaccard  number_jaccard
+     S1-961748985        S2-226920017     0.998148         Mumbai Samachar Marg Foods Co               16mumbaisamachar.com                                  Sir Vithaldas Chambers, 4Th Floor 16, Mumbai Samachar Marg, Mumbai, Maharashtra                                                       SIR VITHALDAS CHAMBERS, 16-MUMBAI SAMACHAR MARG, Maharashtra             0.693878               0.800000             0.5
+     S1-591250131        S2-681576947     0.996590                  RRZ Technologies Ltd               Technologies RLZ Ltd                                                         57 Raja Basanta Roy Road, Kolkata, Calcutta, West Bengal                                                        #057 RAJA BASANTA ROY ROAD, CALCUTTA, NO BLOCK, West Bengal             0.800000               0.583333             1.0
+      S1-37974746        S2-333046178     0.995549         Suryaika Greh Private Limited     Suryaiki Greh Private  Limited Nalini Apartment, 1St Floor Shop No 17, Kisan Nagar No 3, Bhatwadi, Road No 16, Wagle Estate, Thane, Maharashtra NALINI APARTMENT, D/1ST FLOOR SHOP NO 17, KISAN NAGAR NO 3, BHATWADI, ROAD NO 16, WAGLE ESTATE, THANE, Maharashtra             0.965517               0.944444             1.0
+     S1-735325699        S2-680286007     0.995269        Noida Services Private Limited    Noida  Private Limited Services                                    Shop No. 47, Ii Nd Floor Sector 18, Noida, Gautam Buddha Nagar, Uttar Pradesh                                              E-3-6, 2ND FLOOR, SECTOR 8, GAUTAM BUDDHA NAGAR, NOIDA, Uttar Pradesh             0.700000               0.421053             0.0
+     S1-521580178        S2-201433030     0.994445 Services Rescue Luxmi Private Limited  PERFECT SERVICES PRIVATE  LIMITED                                                                    Meerut, Plot No 3 Bhopal Vihar, Uttar Pradesh                                                                     Uttar Pradesh, PLOT NO #3 BHOPAL VIHAR, MEERUT             0.695652               1.000000             1.0
+     S1-255359118        S2-553680593     0.993624                       NC Jain Company                   NSC Jain Company                                                                    1-10-233/1, Ashok Nagar, Hyderabad, Telangana                                                                                   1-10-233/1, ASHOK NAGAR, తెలంగాణ             0.967742               0.454545             1.0
+     S1-403309795        S2-926241111     0.993499                        PLM Management           PLM Management Infratech                   Uttar Pradesh, Gautam Buddha Nagar, Noida, Flat No 804 T6 Panchsheel, Hynish, Greaternoidawest                                             H.NO 804 T6 PANCHSHEEL, HYNISH, GREATERNOIDAWEST, NOIDA, Uttar Pradesh             0.736842               0.642857             1.0
+     S1-610243400        S2-972008688     0.992811             Indram Biscuits Pvt. Ltd.        Indrim Biscuits Pvt. (Ltd.)                                                          B-3/16Safdarjung Enclave, New Delhi, South Delhi, Delhi                                                                         B-3/16SAFDARJUNG ENCLAVE, NEW DELHI, Delhi             0.956522               0.857143             1.0
+     S1-502574894        S2-204442051     0.992409               Vaayuendra Data Limited           Vaayuendova Data Limited                                          Door No.3A, M.G.R. Nagar, 5Th Main Road Velacherry, Chennai, Tamil Nadu                                                   DOOR NO.3A  , M.G.R. NAGAR, 5TH MAIN ROAD VELACHERRY, Tamil Nadu             0.936170               0.928571             1.0
+     S1-457075911        S2-471358078     0.990964    Sarasora Resources Private Limited Sarazora Resources Private Limited   Eco House-401, 402 & 403, Vishweshwar Nagar, Off Aarey Road, Goregaon (East), Mumbai, Mumbai City, Maharashtra                  ECO HOUSE-401, 402 & 403, VISHWESHWAR NAGAR, OFF AAREY ROAD, GOREGAON (EAST), MUMBAI, Maharashtra             0.970588               0.937500             1.0

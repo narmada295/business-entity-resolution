@@ -1,0 +1,338 @@
+Loading previous blocking misses...
+Missed true links loaded: 3,255
+
+================================================================================
+TRANSLITERATION SIGNAL — ALL PREVIOUS MISSES
+================================================================================
+Cross-script-like pairs: 1,950 / 3,255 (59.91%)
+
+Original score:
+count    3255.000000
+mean       43.015426
+std        37.473375
+min         0.000000
+25%        11.111111
+50%        14.285714
+75%        86.666667
+90%        94.218487
+max       100.000000
+Name: original_name_score, dtype: float64
+
+Transliterated score:
+count    3255.000000
+mean       75.904740
+std        15.577724
+min         0.000000
+25%        67.647059
+50%        75.409836
+75%        87.272727
+90%        95.081967
+max       100.000000
+Name: translit_name_score, dtype: float64
+
+Transliteration gain:
+count    3255.000000
+mean       32.889314
+std        29.416441
+min         0.000000
+25%         0.000000
+50%        46.746747
+75%        60.422535
+90%        66.040980
+max        85.367965
+Name: translit_gain, dtype: float64
+
+================================================================================
+THRESHOLD COVERAGE
+================================================================================
+score >= 60: original=39.45% translit=89.59% gain=+50.14%
+score >= 70: original=36.84% translit=68.51% gain=+31.67%
+score >= 80: original=32.87% translit=38.77% gain=+5.90%
+score >= 90: original=20.09% translit=21.51% gain=+1.41%
+
+================================================================================
+CROSS-SCRIPT SUBSET
+================================================================================
+Pairs: 1,950
+score >= 60: original=6.31% translit=90.00% gain=+83.69%
+score >= 70: original=5.64% translit=58.51% gain=+52.87%
+score >= 80: original=4.41% translit=14.26% gain=+9.85%
+score >= 90: original=2.46% translit=4.82% gain=+2.36%
+
+================================================================================
+LARGE TRANSLITERATION IMPROVEMENTS
+================================================================================
+Gain >= 30 points: 1,809 (55.58%)
+
+--- 1 ---
+S1: North Investment
+S2: नॉर्थ इन्वेस्टमेंट
+S1 translit: north investment
+S2 translit: nonrth investtmentt
+Original score: 6.1
+Translit score: 91.4
+Gain: +85.4
+
+--- 2 ---
+S1: Shiv Global Limited
+S2: शिव ग्लोबल लिमिटेड
+S1 translit: shiv global limited
+S2 translit: shiv globl limittedd
+Original score: 11.4
+Translit score: 92.3
+Gain: +80.9
+
+--- 3 ---
+S1: Supreme Investments
+S2: सुप्रीम इन्वेस्टमेंट्स
+S1 translit: supreme investments
+S2 translit: supriim investtmentts
+Original score: 5.6
+Translit score: 85.0
+Gain: +79.4
+
+--- 4 ---
+S1: Urban Guru Investments Limited
+S2: अर्बन गुरु इन्वेस्टमेंट्स लिमिटेड
+S1 translit: urban guru investments limited
+S2 translit: arbn guru investtmentts limittedd
+Original score: 10.5
+Translit score: 88.9
+Gain: +78.4
+
+--- 5 ---
+S1: Anand Marketing Limited
+S2: आनंद मार्केटिंग लिमिटेड
+S1 translit: anand marketing limited
+S2 translit: aannd maarketting limittedd
+Original score: 9.8
+Translit score: 88.0
+Gain: +78.2
+
+--- 6 ---
+S1: Lotus Marketing Limited
+S2: लोटस मार्केटिंग लिमिटेड
+S1 translit: lotus marketing limited
+S2 translit: lotts maarketting limittedd
+Original score: 10.3
+Translit score: 88.0
+Gain: +77.7
+
+--- 7 ---
+S1: Digital Investments
+S2: डिजिटल इन्वेस्टमेंट्स
+S1 translit: digital investments
+S2 translit: ddijittl investtmentts
+Original score: 5.4
+Translit score: 82.9
+Gain: +77.5
+
+--- 8 ---
+S1: Baba Vijay Marketing
+S2: बाबा विजय मार्केटिंग
+S1 translit: baba vijay marketing
+S2 translit: baabaa vijy maarketting
+Original score: 11.1
+Translit score: 88.4
+Gain: +77.3
+
+--- 9 ---
+S1: Krishna Investments
+S2: కృష్ణా ఇన్వెస్ట్‌మెంట్స్
+S1 translit: krishna investments
+S2 translit: krssnnaa investtmentts
+Original score: 5.7
+Translit score: 82.9
+Gain: +77.2
+
+--- 10 ---
+S1: Star Marketing Limited
+S2: स्टार मार्केटिंग लिमिटेड
+S1 translit: star marketing limited
+S2 translit: sttaar maarketting limittedd
+Original score: 10.8
+Translit score: 88.0
+Gain: +77.2
+
+--- 11 ---
+S1: Arihant Trading
+S2: અરિહંત ટ્રેડિંગ
+S1 translit: arihant trading
+S2 translit: arihnt ttredding
+Original score: 6.9
+Translit score: 83.9
+Gain: +77.0
+
+--- 12 ---
+S1: Arihant Trading
+S2: અરિહંત ટ્રેડિંગ
+S1 translit: arihant trading
+S2 translit: arihnt ttredding
+Original score: 6.9
+Translit score: 83.9
+Gain: +77.0
+
+--- 13 ---
+S1: Maa Global Limited
+S2: माँ ग्लोबल लिमिटेड
+S1 translit: maa global limited
+S2 translit: maan globl limittedd
+Original score: 13.3
+Translit score: 89.5
+Gain: +76.1
+
+--- 14 ---
+S1: Seven Builders Limited
+S2: સેવન બિલ્ડર્સ લિમિટેડ
+S1 translit: seven builders limited
+S2 translit: sevn bilddrs limittedd
+Original score: 10.3
+Translit score: 86.4
+Gain: +76.1
+
+--- 15 ---
+S1: Shakti Impex Limited
+S2: शक्ति इम्पेक्स लिमिटेड
+S1 translit: shakti impex limited
+S2 translit: shkti impeks limittedd
+Original score: 9.8
+Translit score: 85.7
+Gain: +76.0
+
+--- 16 ---
+S1: Golden Enterprises Limited
+S2: ಗೋಲ್ಡನ್ ಎಂಟರ್‌ಪ್ರೈಸಸ್ ಲಿಮಿಟೆಡ್
+S1 translit: golden enterprises limited
+S2 translit: goolddn enttrpraiss limittedd
+Original score: 8.0
+Translit score: 83.6
+Gain: +75.6
+
+--- 17 ---
+S1: Gujarat Industries Limited
+S2: గుజరాత్ ఇండస్ట్రీస్ లిమిటెడ్
+S1 translit: gujarat industries limited
+S2 translit: gujraat inddsttriis limittedd
+Original score: 8.2
+Translit score: 83.6
+Gain: +75.5
+
+--- 18 ---
+S1: Gujarat Investments Private Limited
+S2: ગુજરાત ઇન્વેસ્ટમેન્ટ્સ પ્રાઇવેટ લિમિટેડ
+S1 translit: gujarat investments private limited
+S2 translit: gujraat investtmentts praaivett limittedd
+Original score: 8.8
+Translit score: 84.2
+Gain: +75.4
+
+--- 19 ---
+S1: Jain Investment Private Limited
+S2: जैन इन्वेस्टमेंट प्राइवेट लिमिटेड
+S1 translit: jain investment private limited
+S2 translit: jain investtmentt praaivett limittedd
+Original score: 10.2
+Translit score: 85.3
+Gain: +75.1
+
+--- 20 ---
+S1: Jain Investment Private Limited
+S2: जैन इन्वेस्टमेंट प्राइवेट लिमिटेड
+S1 translit: jain investment private limited
+S2 translit: jain investtmentt praaivett limittedd
+Original score: 10.2
+Translit score: 85.3
+Gain: +75.1
+
+--- 21 ---
+S1: Shakti Management Limited
+S2: शक्ति मैनेजमेंट लिमिटेड
+S1 translit: shakti management limited
+S2 translit: shkti mainejmentt limittedd
+Original score: 9.5
+Translit score: 84.6
+Gain: +75.1
+
+--- 22 ---
+S1: Arihant Systems
+S2: ಅರಿಹಂತ್ ಸಿಸ್ಟಮ್ಸ್
+S1 translit: arihant systems
+S2 translit: arihnt sisttms
+Original score: 7.7
+Translit score: 82.8
+Gain: +75.1
+
+--- 23 ---
+S1: Shiva Industries Limited
+S2: శివ ఇండస్ట్రీస్ లిమిటెడ్
+S1 translit: shiva industries limited
+S2 translit: shiv inddsttriis limittedd
+Original score: 9.1
+Translit score: 84.0
+Gain: +74.9
+
+--- 24 ---
+S1: Eastern Investments
+S2: ईस्टर्न इन्वेस्टमेंट्स
+S1 translit: eastern investments
+S2 translit: iisttrn investtmentts
+Original score: 5.3
+Translit score: 80.0
+Gain: +74.7
+
+--- 25 ---
+S1: Eastern Investments
+S2: ईस्टर्न इन्वेस्टमेंट्स
+S1 translit: eastern investments
+S2 translit: iisttrn investtmentts
+Original score: 5.3
+Translit score: 80.0
+Gain: +74.7
+
+--- 26 ---
+S1: Smart Builders Limited
+S2: स्मार्ट बिल्डर्स लिमिटेड
+S1 translit: smart builders limited
+S2 translit: smaartt bilddrs limittedd
+Original score: 10.5
+Translit score: 85.1
+Gain: +74.6
+
+--- 27 ---
+S1: Aditya Investments Private Limited
+S2: आदित्य इन्वेस्टमेंट्स प्राइवेट लिमिटेड
+S1 translit: aditya investments private limited
+S2 translit: aadity investtmentts praaivett limittedd
+Original score: 9.2
+Translit score: 83.8
+Gain: +74.6
+
+--- 28 ---
+S1: Surya Developers Limited
+S2: सूर्या डेवलपर्स लिमिटेड
+S1 translit: surya developers limited
+S2 translit: suuryaa ddevlprs limittedd
+Original score: 9.5
+Translit score: 84.0
+Gain: +74.5
+
+--- 29 ---
+S1: Tirupati Marketing Private Limited
+S2: तिरुपति मार्केटिंग प्राइवेट लिमिटेड
+S1 translit: tirupati marketing private limited
+S2 translit: tirupti maarketting praaivett limittedd
+Original score: 10.5
+Translit score: 84.9
+Gain: +74.4
+
+--- 30 ---
+S1: Silver Ventures
+S2: સિલ્વર વેન્ચર્સ
+S1 translit: silver ventures
+S2 translit: silvr vencrs
+Original score: 7.1
+Translit score: 81.5
+Gain: +74.3
+
+Saved detailed results to:
+/home/mahaswint/amazon-ml/code/outputs/transliteration_miss_analysis.csv

@@ -1,0 +1,35 @@
+Loading same 20k S1 sample...
+Queries loaded: 20,000
+True S2 links: 33,472
+
+Building structured-address indexes...
+Useful number keys: 2,148
+Useful token keys: 25,468
+
+Streaming S2 India...
+chunks=1   read=100,000 India=40,064 elapsed=9.7schunks=2   read=200,000 India=80,432 elapsed=18.8schunks=3   read=300,000 India=120,536 elapsed=27.6schunks=4   read=400,000 India=160,461 elapsed=36.5schunks=5   read=500,000 India=200,531 elapsed=45.6schunks=6   read=600,000 India=240,976 elapsed=54.5schunks=7   read=700,000 India=280,868 elapsed=63.3schunks=8   read=800,000 India=320,793 elapsed=72.2schunks=9   read=900,000 India=361,045 elapsed=81.1schunks=10  read=1,000,000 India=400,819 elapsed=89.9schunks=11  read=1,100,000 India=440,597 elapsed=98.7schunks=12  read=1,200,000 India=480,826 elapsed=107.6schunks=13  read=1,300,000 India=520,849 elapsed=116.5schunks=14  read=1,400,000 India=561,239 elapsed=125.4schunks=15  read=1,500,000 India=601,135 elapsed=134.2schunks=16  read=1,600,000 India=640,882 elapsed=143.0schunks=17  read=1,700,000 India=680,693 elapsed=151.8schunks=18  read=1,800,000 India=720,557 elapsed=160.5schunks=19  read=1,900,000 India=760,822 elapsed=169.6schunks=20  read=2,000,000 India=800,924 elapsed=178.5schunks=21  read=2,100,000 India=840,817 elapsed=187.2schunks=22  read=2,200,000 India=880,925 elapsed=196.0schunks=23  read=2,300,000 India=921,048 elapsed=204.8schunks=24  read=2,400,000 India=961,121 elapsed=213.6schunks=25  read=2,500,000 India=1,001,290 elapsed=222.4schunks=26  read=2,600,000 India=1,041,462 elapsed=231.2schunks=27  read=2,700,000 India=1,081,449 elapsed=240.1schunks=28  read=2,800,000 India=1,121,618 elapsed=248.9schunks=29  read=2,900,000 India=1,161,838 elapsed=257.8schunks=30  read=3,000,000 India=1,202,006 elapsed=266.6schunks=31  read=3,100,000 India=1,242,080 elapsed=275.4schunks=32  read=3,200,000 India=1,282,119 elapsed=284.2schunks=33  read=3,300,000 India=1,322,261 elapsed=292.9schunks=34  read=3,400,000 India=1,362,603 elapsed=301.7schunks=35  read=3,500,000 India=1,402,592 elapsed=310.5schunks=36  read=3,600,000 India=1,442,606 elapsed=319.5schunks=37  read=3,700,000 India=1,482,817 elapsed=328.4schunks=38  read=3,800,000 India=1,522,939 elapsed=337.3schunks=39  read=3,900,000 India=1,563,315 elapsed=346.1schunks=40  read=4,000,000 India=1,603,607 elapsed=354.9schunks=41  read=4,100,000 India=1,643,570 elapsed=363.6schunks=42  read=4,200,000 India=1,683,669 elapsed=372.4schunks=43  read=4,300,000 India=1,723,507 elapsed=381.3schunks=44  read=4,400,000 India=1,763,601 elapsed=390.1schunks=45  read=4,500,000 India=1,803,696 elapsed=398.9schunks=46  read=4,600,000 India=1,843,411 elapsed=407.6schunks=47  read=4,700,000 India=1,883,444 elapsed=416.5schunks=48  read=4,800,000 India=1,923,560 elapsed=425.4schunks=49  read=4,900,000 India=1,963,734 elapsed=434.3schunks=50  read=5,000,000 India=2,003,911 elapsed=443.1schunks=51  read=5,034,616 India=2,017,799 elapsed=446.3s
+
+Structured search time: 446.31s
+
+Saving structured-address cache:
+/home/mahaswint/amazon-ml/code/outputs/s2_india_structured_candidates.pkl
+
+Loading cached name/address candidates...
+
+
+====================================================================================================
+STRUCTURED ADDRESS BLOCKING RESULTS
+====================================================================================================
+Method                                      Recall    Avg Cand    Full Entity   Zero Recovery
+----------------------------------------------------------------------------------------------------
+Name K20                                   46.12%       20.00        32.53%         41.85%
+Char Address K20                           83.99%       20.00        74.94%          9.30%
+Structured Address K20                     87.72%       19.99        80.72%          7.46%
+Name + Char Address                        90.28%       39.21        84.09%          5.63%
+Char Address + Structured                  90.52%       35.79        84.02%          5.03%
+Name + Char Address + Structured           94.08%       54.95        89.99%          3.39%
+
+Additional true links from structured blocker:
+1,274
+
+Total runtime: 455.17s

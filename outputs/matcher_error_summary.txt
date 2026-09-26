@@ -1,0 +1,80 @@
+MATCHER ERROR ANALYSIS
+======================================================================
+Threshold: 0.527
+Validation pairs: 417,986
+True positives: 8,879
+False negatives: 622
+False positives: 242
+True negatives: 408,243
+
+FALSE NEGATIVES
+---------------
+Rows: 622
+probability                  mean=0.2133 median=0.1894 p25=0.0655 p75=0.3526
+name_ratio                   mean=0.5910 median=0.7009 p25=0.1590 p75=0.8818
+name_token_set               mean=0.6587 median=0.8571 p25=0.1788 p75=1.0000
+name_token_jaccard           mean=0.4266 median=0.5000 p25=0.0000 p75=0.6667
+translit_name_ratio          mean=0.7146 median=0.7248 p25=0.5600 p75=0.8836
+translit_name_token_set      mean=0.7675 median=0.8596 p25=0.5679 p75=1.0000
+address_ratio                mean=0.4983 median=0.5922 p25=0.0000 p75=0.8321
+address_token_set            mean=0.6191 median=0.8800 p25=0.0000 p75=0.9730
+address_token_jaccard        mean=0.4076 median=0.4167 p25=0.0000 p75=0.7143
+shared_number_count          mean=0.7958 median=0.0000 p25=0.0000 p75=1.0000
+number_jaccard               mean=0.2984 median=0.0000 p25=0.0000 p75=0.5750
+name_length_ratio            mean=0.8363 median=0.8800 p25=0.7500 p75=1.0000
+address_length_ratio         mean=0.5507 median=0.7154 p25=0.0000 p75=0.9344
+blocker_count                mean=1.5450 median=1.0000 p25=1.0000 p75=2.0000
+
+Buckets:
+name_ratio >= 0.8                   249 ( 40.03%)
+translit_name_ratio >= 0.8          252 ( 40.51%)
+address_ratio >= 0.8                191 ( 30.71%)
+address_token_jaccard >= 0.5        278 ( 44.69%)
+number_jaccard >= 0.5               213 ( 34.24%)
+shared number                       278 ( 44.69%)
+missing S2 address                  200 ( 32.15%)
+name blocker                        268 ( 43.09%)
+address blocker                     318 ( 51.13%)
+structured blocker                  335 ( 53.86%)
+embedding blocker                    40 (  6.43%)
+
+FALSE POSITIVES
+---------------
+Rows: 242
+probability                  mean=0.7606 median=0.7587 p25=0.6249 p75=0.8880
+name_ratio                   mean=0.5635 median=0.6948 p25=0.1294 p75=0.8571
+name_token_set               mean=0.6235 median=0.8377 p25=0.1410 p75=0.9399
+name_token_jaccard           mean=0.3694 median=0.4286 p25=0.0000 p75=0.6000
+translit_name_ratio          mean=0.6997 median=0.7260 p25=0.6032 p75=0.8604
+translit_name_token_set      mean=0.7490 median=0.8468 p25=0.5882 p75=0.9518
+address_ratio                mean=0.6909 median=0.7876 p25=0.5855 p75=0.9076
+address_token_set            mean=0.8332 median=0.9556 p25=0.8894 p75=1.0000
+address_token_jaccard        mean=0.6116 median=0.6667 p25=0.4563 p75=0.8451
+shared_number_count          mean=1.2769 median=1.0000 p25=0.0000 p75=2.0000
+number_jaccard               mean=0.5398 median=0.5000 p25=0.0000 p75=1.0000
+name_length_ratio            mean=0.8356 median=0.8929 p25=0.7906 p75=0.9677
+address_length_ratio         mean=0.7426 median=0.8784 p25=0.6162 p75=0.9709
+blocker_count                mean=1.9215 median=2.0000 p25=1.2500 p75=2.0000
+
+Buckets:
+name_ratio >= 0.8                    89 ( 36.78%)
+translit_name_ratio >= 0.8           90 ( 37.19%)
+address_ratio >= 0.8                118 ( 48.76%)
+address_token_jaccard >= 0.5        175 ( 72.31%)
+number_jaccard >= 0.5               155 ( 64.05%)
+shared number                       172 ( 71.07%)
+missing S2 address                   29 ( 11.98%)
+name blocker                         77 ( 31.82%)
+address blocker                     188 ( 77.69%)
+structured blocker                  187 ( 77.27%)
+embedding blocker                    13 (  5.37%)
+
+NEAR-THRESHOLD ERRORS
+------------------------------
+FN probability >= 0.30: 216
+FP probability <= 0.60: 43
+
+HIGH-CONFIDENCE MISTAKES
+------------------------------
+FN probability <= 0.05: 134
+FP probability >= 0.90: 55

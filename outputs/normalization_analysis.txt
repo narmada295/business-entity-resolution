@@ -1,0 +1,66 @@
+Temporary analysis DB:
+/home/mahaswint/amazon-ml/code/outputs/normalization_analysis.sqlite
+
+Loading + normalizing Source 1...
+S1 processed: 50,000S1 processed: 100,000S1 processed: 150,000S1 processed: 200,000S1 processed: 250,000S1 processed: 300,000S1 processed: 350,000S1 processed: 400,000S1 processed: 450,000S1 processed: 500,000S1 processed: 550,000S1 processed: 600,000S1 processed: 650,000S1 processed: 700,000S1 processed: 750,000S1 processed: 800,000S1 processed: 850,000S1 processed: 900,000S1 processed: 950,000S1 processed: 1,000,000S1 processed: 1,050,000S1 processed: 1,100,000S1 processed: 1,150,000S1 processed: 1,200,000S1 processed: 1,250,000S1 processed: 1,300,000S1 processed: 1,350,000S1 processed: 1,400,000S1 processed: 1,450,000S1 processed: 1,500,000S1 processed: 1,550,000S1 processed: 1,600,000S1 processed: 1,650,000S1 processed: 1,700,000S1 processed: 1,750,000S1 processed: 1,800,000S1 processed: 1,850,000S1 processed: 1,900,000S1 processed: 1,950,000S1 processed: 2,000,000S1 processed: 2,050,000S1 processed: 2,100,000S1 processed: 2,150,000S1 processed: 2,200,000S1 processed: 2,206,821
+
+Expanding ground-truth links...
+GT entities: 50,000 | positive pairs: 172,731GT entities: 100,000 | positive pairs: 345,997GT entities: 150,000 | positive pairs: 519,674GT entities: 200,000 | positive pairs: 693,069GT entities: 250,000 | positive pairs: 866,212GT entities: 300,000 | positive pairs: 1,038,755GT entities: 350,000 | positive pairs: 1,211,897GT entities: 400,000 | positive pairs: 1,384,645GT entities: 450,000 | positive pairs: 1,557,613GT entities: 500,000 | positive pairs: 1,730,506GT entities: 550,000 | positive pairs: 1,903,263GT entities: 600,000 | positive pairs: 2,076,133GT entities: 650,000 | positive pairs: 2,249,386GT entities: 700,000 | positive pairs: 2,422,079GT entities: 750,000 | positive pairs: 2,595,388GT entities: 800,000 | positive pairs: 2,768,341GT entities: 850,000 | positive pairs: 2,941,235GT entities: 900,000 | positive pairs: 3,114,006GT entities: 950,000 | positive pairs: 3,287,163GT entities: 1,000,000 | positive pairs: 3,460,754GT entities: 1,050,000 | positive pairs: 3,633,852GT entities: 1,100,000 | positive pairs: 3,806,818GT entities: 1,150,000 | positive pairs: 3,980,736GT entities: 1,200,000 | positive pairs: 4,153,634GT entities: 1,250,000 | positive pairs: 4,325,994GT entities: 1,300,000 | positive pairs: 4,498,735GT entities: 1,350,000 | positive pairs: 4,671,544GT entities: 1,400,000 | positive pairs: 4,844,772GT entities: 1,450,000 | positive pairs: 5,017,812GT entities: 1,500,000 | positive pairs: 5,190,860GT entities: 1,550,000 | positive pairs: 5,364,103GT entities: 1,600,000 | positive pairs: 5,537,259GT entities: 1,650,000 | positive pairs: 5,710,757GT entities: 1,700,000 | positive pairs: 5,884,185GT entities: 1,750,000 | positive pairs: 6,057,673GT entities: 1,800,000 | positive pairs: 6,230,774GT entities: 1,850,000 | positive pairs: 6,403,256GT entities: 1,900,000 | positive pairs: 6,576,314GT entities: 1,950,000 | positive pairs: 6,748,888GT entities: 2,000,000 | positive pairs: 6,921,867GT entities: 2,050,000 | positive pairs: 7,095,313GT entities: 2,100,000 | positive pairs: 7,268,445GT entities: 2,150,000 | positive pairs: 7,441,661GT entities: 2,200,000 | positive pairs: 7,614,812GT entities: 2,206,821 | positive pairs: 7,638,365
+
+Creating ground-truth indexes...
+
+Loading + normalizing S2...
+S2 processed: 50,000S2 processed: 100,000S2 processed: 150,000S2 processed: 200,000S2 processed: 250,000S2 processed: 300,000S2 processed: 350,000S2 processed: 400,000S2 processed: 450,000S2 processed: 500,000S2 processed: 550,000S2 processed: 600,000S2 processed: 650,000S2 processed: 700,000S2 processed: 750,000S2 processed: 800,000S2 processed: 850,000S2 processed: 900,000S2 processed: 950,000S2 processed: 1,000,000S2 processed: 1,050,000S2 processed: 1,100,000S2 processed: 1,150,000S2 processed: 1,200,000S2 processed: 1,250,000S2 processed: 1,300,000S2 processed: 1,350,000S2 processed: 1,400,000S2 processed: 1,450,000S2 processed: 1,500,000S2 processed: 1,550,000S2 processed: 1,600,000S2 processed: 1,650,000S2 processed: 1,700,000S2 processed: 1,750,000S2 processed: 1,800,000S2 processed: 1,850,000S2 processed: 1,900,000S2 processed: 1,950,000S2 processed: 2,000,000S2 processed: 2,050,000S2 processed: 2,100,000S2 processed: 2,150,000S2 processed: 2,200,000S2 processed: 2,250,000S2 processed: 2,300,000S2 processed: 2,350,000S2 processed: 2,400,000S2 processed: 2,450,000S2 processed: 2,500,000S2 processed: 2,550,000S2 processed: 2,600,000S2 processed: 2,650,000S2 processed: 2,700,000S2 processed: 2,750,000S2 processed: 2,800,000S2 processed: 2,850,000S2 processed: 2,900,000S2 processed: 2,950,000S2 processed: 3,000,000S2 processed: 3,050,000S2 processed: 3,100,000S2 processed: 3,150,000S2 processed: 3,200,000S2 processed: 3,250,000S2 processed: 3,300,000S2 processed: 3,350,000S2 processed: 3,400,000S2 processed: 3,450,000S2 processed: 3,500,000S2 processed: 3,550,000S2 processed: 3,600,000S2 processed: 3,650,000S2 processed: 3,700,000S2 processed: 3,750,000S2 processed: 3,800,000S2 processed: 3,850,000S2 processed: 3,900,000S2 processed: 3,950,000S2 processed: 4,000,000S2 processed: 4,050,000S2 processed: 4,100,000S2 processed: 4,150,000S2 processed: 4,200,000S2 processed: 4,250,000S2 processed: 4,300,000S2 processed: 4,350,000S2 processed: 4,400,000S2 processed: 4,450,000S2 processed: 4,500,000S2 processed: 4,550,000S2 processed: 4,600,000S2 processed: 4,650,000S2 processed: 4,700,000S2 processed: 4,750,000S2 processed: 4,800,000S2 processed: 4,850,000S2 processed: 4,900,000S2 processed: 4,950,000S2 processed: 5,000,000S2 processed: 5,034,616
+
+Calculating positive-pair overlap for S2...
+
+===========================================================================
+SOURCE 2 POSITIVE PAIRS
+===========================================================================
+Positive pairs: 3,693,619
+
+Raw exact name                          174,617 (  4.73%)
+Normalized exact name                   786,829 ( 21.30%)
+Raw exact address                             5 (  0.00%)
+Normalized exact address                460,928 ( 12.48%)
+Normalized name OR address            1,148,607 ( 31.10%)
+Normalized name AND address              99,150 (  2.68%)
+Country equal                         3,693,619 (100.00%)
+
+Loading + normalizing S3...
+S3 processed: 50,000S3 processed: 100,000S3 processed: 150,000S3 processed: 200,000S3 processed: 250,000S3 processed: 300,000S3 processed: 350,000S3 processed: 400,000S3 processed: 450,000S3 processed: 500,000S3 processed: 550,000S3 processed: 600,000S3 processed: 650,000S3 processed: 700,000S3 processed: 750,000S3 processed: 800,000S3 processed: 850,000S3 processed: 900,000S3 processed: 950,000S3 processed: 1,000,000S3 processed: 1,050,000S3 processed: 1,100,000S3 processed: 1,150,000S3 processed: 1,200,000S3 processed: 1,250,000S3 processed: 1,300,000S3 processed: 1,350,000S3 processed: 1,400,000S3 processed: 1,450,000S3 processed: 1,500,000S3 processed: 1,550,000S3 processed: 1,600,000S3 processed: 1,650,000S3 processed: 1,700,000S3 processed: 1,750,000S3 processed: 1,800,000S3 processed: 1,850,000S3 processed: 1,900,000S3 processed: 1,950,000S3 processed: 2,000,000S3 processed: 2,050,000S3 processed: 2,100,000S3 processed: 2,150,000S3 processed: 2,200,000S3 processed: 2,250,000S3 processed: 2,300,000S3 processed: 2,350,000S3 processed: 2,400,000S3 processed: 2,450,000S3 processed: 2,500,000S3 processed: 2,550,000S3 processed: 2,600,000S3 processed: 2,650,000S3 processed: 2,700,000S3 processed: 2,750,000S3 processed: 2,800,000S3 processed: 2,850,000S3 processed: 2,900,000S3 processed: 2,950,000S3 processed: 3,000,000S3 processed: 3,050,000S3 processed: 3,100,000S3 processed: 3,150,000S3 processed: 3,200,000S3 processed: 3,250,000S3 processed: 3,300,000S3 processed: 3,350,000S3 processed: 3,400,000S3 processed: 3,450,000S3 processed: 3,500,000S3 processed: 3,550,000S3 processed: 3,600,000S3 processed: 3,650,000S3 processed: 3,700,000S3 processed: 3,750,000S3 processed: 3,800,000S3 processed: 3,850,000S3 processed: 3,900,000S3 processed: 3,950,000S3 processed: 4,000,000S3 processed: 4,050,000S3 processed: 4,100,000S3 processed: 4,150,000S3 processed: 4,200,000S3 processed: 4,250,000S3 processed: 4,300,000S3 processed: 4,350,000S3 processed: 4,400,000S3 processed: 4,450,000S3 processed: 4,500,000S3 processed: 4,550,000S3 processed: 4,600,000S3 processed: 4,650,000S3 processed: 4,700,000S3 processed: 4,750,000S3 processed: 4,800,000S3 processed: 4,850,000S3 processed: 4,900,000S3 processed: 4,950,000S3 processed: 5,000,000S3 processed: 5,050,000S3 processed: 5,100,000S3 processed: 5,150,000S3 processed: 5,200,000S3 processed: 5,250,000S3 processed: 5,285,603
+
+Calculating positive-pair overlap for S3...
+
+===========================================================================
+SOURCE 3 POSITIVE PAIRS
+===========================================================================
+Positive pairs: 3,944,746
+
+Raw exact name                          179,501 (  4.55%)
+Normalized exact name                   871,530 ( 22.09%)
+Raw exact address                       170,069 (  4.31%)
+Normalized exact address                170,441 (  4.32%)
+Normalized name OR address            1,041,838 ( 26.41%)
+Normalized name AND address                 133 (  0.00%)
+Country equal                         3,944,746 (100.00%)
+
+===========================================================================
+ALL POSITIVE PAIRS
+===========================================================================
+Positive pairs: 7,638,365
+
+Raw exact name                          354,118 (  4.64%)
+Normalized exact name                 1,658,359 ( 21.71%)
+Raw exact address                       170,074 (  2.23%)
+Normalized exact address                631,369 (  8.27%)
+Normalized name OR address            2,190,445 ( 28.68%)
+Normalized name AND address              99,283 (  1.30%)
+Country equal                         7,638,365 (100.00%)
+
+Analysis complete.
+
+SQLite database retained at:
+/home/mahaswint/amazon-ml/code/outputs/normalization_analysis.sqlite
+
+You can delete it after we inspect the results.

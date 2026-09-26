@@ -1,0 +1,34 @@
+Loading same 20k S1 sample...
+Queries loaded: 20,000
+True S2 links: 33,472
+
+Building transliterated query vectors...
+Query nnz: 862,466
+
+Streaming non-ASCII S2 India names...
+chunks=1   read=100,000 India=40,064 nonASCII=11,006 elapsed=1.8schunks=2   read=200,000 India=80,432 nonASCII=22,015 elapsed=3.6schunks=3   read=300,000 India=120,536 nonASCII=33,110 elapsed=5.4schunks=4   read=400,000 India=160,461 nonASCII=44,344 elapsed=7.3schunks=5   read=500,000 India=200,531 nonASCII=55,485 elapsed=9.1schunks=6   read=600,000 India=240,976 nonASCII=66,646 elapsed=11.0schunks=7   read=700,000 India=280,868 nonASCII=77,695 elapsed=12.8schunks=8   read=800,000 India=320,793 nonASCII=88,782 elapsed=14.7schunks=9   read=900,000 India=361,045 nonASCII=99,892 elapsed=16.5schunks=10  read=1,000,000 India=400,819 nonASCII=110,910 elapsed=18.3schunks=11  read=1,100,000 India=440,597 nonASCII=122,108 elapsed=20.1schunks=12  read=1,200,000 India=480,826 nonASCII=133,425 elapsed=21.9schunks=13  read=1,300,000 India=520,849 nonASCII=144,490 elapsed=23.7schunks=14  read=1,400,000 India=561,239 nonASCII=155,705 elapsed=25.4schunks=15  read=1,500,000 India=601,135 nonASCII=166,831 elapsed=27.2schunks=16  read=1,600,000 India=640,882 nonASCII=177,913 elapsed=29.0schunks=17  read=1,700,000 India=680,693 nonASCII=189,119 elapsed=30.8schunks=18  read=1,800,000 India=720,557 nonASCII=200,313 elapsed=32.6schunks=19  read=1,900,000 India=760,822 nonASCII=211,603 elapsed=34.4schunks=20  read=2,000,000 India=800,924 nonASCII=222,887 elapsed=36.2schunks=21  read=2,100,000 India=840,817 nonASCII=234,193 elapsed=38.0schunks=22  read=2,200,000 India=880,925 nonASCII=245,434 elapsed=39.9schunks=23  read=2,300,000 India=921,048 nonASCII=256,699 elapsed=41.7schunks=24  read=2,400,000 India=961,121 nonASCII=267,999 elapsed=43.5schunks=25  read=2,500,000 India=1,001,290 nonASCII=279,250 elapsed=45.3schunks=26  read=2,600,000 India=1,041,462 nonASCII=290,523 elapsed=47.1schunks=27  read=2,700,000 India=1,081,449 nonASCII=301,671 elapsed=48.9schunks=28  read=2,800,000 India=1,121,618 nonASCII=312,855 elapsed=50.7schunks=29  read=2,900,000 India=1,161,838 nonASCII=323,939 elapsed=52.5schunks=30  read=3,000,000 India=1,202,006 nonASCII=335,070 elapsed=54.2schunks=31  read=3,100,000 India=1,242,080 nonASCII=346,251 elapsed=56.1schunks=32  read=3,200,000 India=1,282,119 nonASCII=357,340 elapsed=57.9schunks=33  read=3,300,000 India=1,322,261 nonASCII=368,590 elapsed=59.7schunks=34  read=3,400,000 India=1,362,603 nonASCII=379,732 elapsed=61.5schunks=35  read=3,500,000 India=1,402,592 nonASCII=390,740 elapsed=63.2schunks=36  read=3,600,000 India=1,442,606 nonASCII=401,866 elapsed=65.0schunks=37  read=3,700,000 India=1,482,817 nonASCII=413,246 elapsed=66.9schunks=38  read=3,800,000 India=1,522,939 nonASCII=424,472 elapsed=68.7schunks=39  read=3,900,000 India=1,563,315 nonASCII=435,772 elapsed=70.6schunks=40  read=4,000,000 India=1,603,607 nonASCII=446,953 elapsed=72.5schunks=41  read=4,100,000 India=1,643,570 nonASCII=458,039 elapsed=74.3schunks=42  read=4,200,000 India=1,683,669 nonASCII=469,289 elapsed=76.1schunks=43  read=4,300,000 India=1,723,507 nonASCII=480,484 elapsed=78.0schunks=44  read=4,400,000 India=1,763,601 nonASCII=491,728 elapsed=79.8schunks=45  read=4,500,000 India=1,803,696 nonASCII=502,859 elapsed=81.6schunks=46  read=4,600,000 India=1,843,411 nonASCII=513,975 elapsed=83.4schunks=47  read=4,700,000 India=1,883,444 nonASCII=525,033 elapsed=85.2schunks=48  read=4,800,000 India=1,923,560 nonASCII=536,189 elapsed=87.0schunks=49  read=4,900,000 India=1,963,734 nonASCII=547,405 elapsed=88.8schunks=50  read=5,000,000 India=2,003,911 nonASCII=558,579 elapsed=90.6schunks=51  read=5,034,616 India=2,017,799 nonASCII=562,437 elapsed=91.3s
+
+S2 India read: 2,017,799
+Non-ASCII names searched: 562,437
+Search time: 91.34s
+
+Saving transliteration cache:
+/home/mahaswint/amazon-ml/code/outputs/s2_india_translit_name_candidates.pkl
+
+Loading existing char-name/address cache...
+
+Structured candidate cache not found.
+This run will evaluate transliteration against the cached name+address union only.
+
+
+==============================================================================================================
+TRANSLITERATED NAME BLOCKING RESULTS
+==============================================================================================================
+Method                                              Recall    Avg Cand    Full Entity   Zero Recovery
+--------------------------------------------------------------------------------------------------------------
+Original Name K20                                  46.12%       20.00        32.53%         41.85%
+Translit Name K20                                   4.62%       20.00         1.70%         91.47%
+Name + Address                                     90.28%       39.21        84.09%          5.63%
+Name + Address + Translit                          90.51%       58.63        84.49%          5.52%
+
+Total runtime: 99.49s

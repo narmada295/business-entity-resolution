@@ -1,0 +1,201 @@
+Loading matcher feature dataset...
+Pairs: 1,393,495
+Entities: 20,000
+
+Loading COMPLETE S2 ground truth...
+Full S2 truth links: 33,472
+Entities with zero S2 matches: 2,636
+Matcher train entities: 14,000
+Matcher validation entities: 6,000
+
+Train candidate pairs: 975,509
+Validation candidate pairs: 417,986
+Train positives: 22,237
+Validation positives: 9,501
+Train positive rate: 2.2795%
+Validation positive rate: 2.2730%
+
+=================================================================
+CANDIDATE-SET ORACLE
+=================================================================
+Validation truth links: 10,014
+True links present in candidates: 9,501
+Pair blocking recall: 94.8772%
+Oracle macro F0.5: 0.966866
+Full entity recovery: 4,777 (91.13%)
+Partial entity recovery: 307
+Zero entity recovery: 158 (3.01%)
+
+Model features: 48
+  name_exact
+  name_ratio
+  name_token_sort
+  name_token_set
+  name_token_jaccard
+  name_length_ratio
+  name_token_count_s1
+  name_token_count_s2
+  shared_name_token_count
+  s1_name_containment
+  s2_name_containment
+  meaningful_name_token_count_s1
+  meaningful_name_token_count_s2
+  shared_meaningful_name_tokens
+  extra_meaningful_tokens_s1
+  extra_meaningful_tokens_s2
+  meaningful_s1_containment
+  meaningful_s2_containment
+  legal_suffix_stripped_ratio
+  legal_suffix_stripped_token_set
+  name_char_3gram_jaccard
+  translit_name_ratio
+  translit_name_token_sort
+  translit_name_token_set
+  address_exact
+  address_ratio
+  address_token_sort
+  address_token_set
+  address_token_jaccard
+  address_length_ratio
+  s1_address_missing
+  s2_address_missing
+  shared_number_count
+  number_jaccard
+  number_exact_set
+  both_have_numbers
+  number_conflict
+  ordered_number_exact
+  first_number_match
+  first_number_conflict
+  from_name_blocker
+  from_address_blocker
+  from_structured_blocker
+  from_embedding_blocker
+  blocker_count
+  name_retrieval_score
+  address_retrieval_score
+  embedding_rank
+
+Training LightGBM...
+[LightGBM] [Info] Number of positive: 22237, number of negative: 953272
+[LightGBM] [Info] Total Bins 4607
+[LightGBM] [Info] Number of data points in the train set: 975509, number of used features: 47
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.022795 -> initscore=-3.758143
+[LightGBM] [Info] Start training from score -3.758143
+Training until validation scores don't improve for 100 rounds
+[50]	valid_0's binary_logloss: 0.0113798
+[100]	valid_0's binary_logloss: 0.00744408
+[150]	valid_0's binary_logloss: 0.00648003
+[200]	valid_0's binary_logloss: 0.00622181
+[250]	valid_0's binary_logloss: 0.00610471
+[300]	valid_0's binary_logloss: 0.00601852
+[350]	valid_0's binary_logloss: 0.00596493
+[400]	valid_0's binary_logloss: 0.0059393
+[450]	valid_0's binary_logloss: 0.00592072
+[500]	valid_0's binary_logloss: 0.00591208
+[550]	valid_0's binary_logloss: 0.00590596
+[600]	valid_0's binary_logloss: 0.00591497
+Early stopping, best iteration is:
+[545]	valid_0's binary_logloss: 0.00590291
+
+Pairwise diagnostics:
+ROC-AUC: 0.999649
+PR-AUC: 0.990097
+
+Tuning threshold on ENTITY-LEVEL macro F0.5...
+
+ Threshold     Macro F0.5   Predicted links
+---------------------------------------------
+      0.53       0.911831             9,113
+      0.52       0.911726             9,131
+      0.54       0.911692             9,098
+      0.46       0.911681             9,237
+      0.41       0.911393             9,334
+      0.51       0.911387             9,153
+      0.55       0.911331             9,081
+      0.48       0.911321             9,199
+      0.44       0.911308             9,288
+      0.56       0.911284             9,064
+      0.45       0.911247             9,259
+      0.47       0.911130             9,215
+      0.37       0.911121             9,422
+      0.50       0.911076             9,172
+      0.42       0.911055             9,322
+
+Best threshold: 0.53
+Best validation macro F0.5: 0.911831
+Predicted links at best threshold: 9,113
+
+Fine-tuned threshold: 0.527
+Fine-tuned validation macro F0.5: 0.912022
+Predicted links: 9,121
+
+=================================================================
+MODEL VS CANDIDATE ORACLE
+=================================================================
+Candidate oracle F0.5: 0.966866
+LightGBM best F0.5:    0.912022
+Matcher gap to oracle: 0.054844
+Fraction of oracle score achieved: 94.33%
+
+============================================================
+FEATURE IMPORTANCE
+============================================================
+                        feature  importance
+            translit_name_ratio        2448
+              name_length_ratio        2235
+    legal_suffix_stripped_ratio        1911
+        name_char_3gram_jaccard        1829
+           address_length_ratio        1701
+       translit_name_token_sort        1690
+                     name_ratio        1513
+              address_token_set        1503
+          address_token_jaccard        1482
+legal_suffix_stripped_token_set        1448
+                  address_ratio        1405
+                 name_token_set        1267
+        address_retrieval_score        1238
+        translit_name_token_set        1219
+           name_retrieval_score        1151
+             address_token_sort        1086
+                name_token_sort        1059
+            name_token_count_s2         932
+                 number_jaccard         863
+             name_token_jaccard         630
+            name_token_count_s1         609
+            shared_number_count         604
+            s2_name_containment         430
+            s1_name_containment         408
+ meaningful_name_token_count_s2         397
+     extra_meaningful_tokens_s2         313
+      meaningful_s2_containment         244
+      meaningful_s1_containment         234
+                  blocker_count         206
+  shared_meaningful_name_tokens         188
+                 embedding_rank         176
+ meaningful_name_token_count_s1         173
+           ordered_number_exact         155
+             first_number_match         154
+        shared_name_token_count         134
+        from_structured_blocker         131
+                number_conflict         119
+     extra_meaningful_tokens_s1         113
+              both_have_numbers         112
+          first_number_conflict         101
+               number_exact_set          60
+         from_embedding_blocker          48
+           from_address_blocker          29
+              from_name_blocker          21
+                  address_exact          12
+                     name_exact           5
+             s2_address_missing           4
+             s1_address_missing           0
+
+Saved model:
+/home/mahaswint/amazon-ml/code/outputs/lightgbm_matcher_sample.txt
+
+Saved validation predictions:
+/home/mahaswint/amazon-ml/code/outputs/lightgbm_validation_predictions.parquet
+
+Saved feature importance:
+/home/mahaswint/amazon-ml/code/outputs/lightgbm_feature_importance.csv

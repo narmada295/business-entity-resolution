@@ -1,0 +1,6 @@
+Loading S1 sample...
+Country: US
+Queries: 500
+
+Streaming S2...
+chunks=1   total_read=50,000 country_rows=30,097chunks=2   total_read=100,000 country_rows=59,936chunks=3   total_read=150,000 country_rows=89,829chunks=4   total_read=200,000 country_rows=119,568chunks=5   total_read=250,000 country_rows=149,574chunks=6   total_read=300,000 country_rows=179,464chunks=7   total_read=350,000 country_rows=209,625chunks=8   total_read=400,000 country_rows=239,539chunks=9   total_read=450,000 country_rows=269,572chunks=10  total_read=500,000 country_rows=299,469chunks=11  total_read=550,000 country_rows=329,296chunks=12  total_read=600,000 country_rows=359,024chunks=13  total_read=650,000 country_rows=389,102chunks=14  total_read=700,000 country_rows=419,132chunks=15  total_read=750,000 country_rows=449,166chunks=16  total_read=800,000 country_rows=479,207chunks=17  total_read=850,000 country_rows=508,924chunks=18  total_read=900,000 country_rows=538,955chunks=19  total_read=950,000 country_rows=569,001chunks=20  total_read=1,000,000 country_rows=599,181chunks=21  total_read=1,050,000 country_rows=629,236chunks=22  total_read=1,100,000 country_rows=659,403chunks=23  total_read=1,150,000 country_rows=689,367chunks=24  total_read=1,200,000 country_rows=719,174

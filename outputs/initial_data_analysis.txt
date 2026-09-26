@@ -1,0 +1,343 @@
+Loading training data...
+
+================================================================================
+COLUMN VALIDATION
+================================================================================
+
+Source 1
+  Missing expected columns: set()
+  Extra columns:            set()
+
+Source 2
+  Missing expected columns: set()
+  Extra columns:            set()
+
+Source 3
+  Missing expected columns: set()
+  Extra columns:            set()
+
+Ground Truth
+  Missing expected columns: set()
+  Extra columns: set()
+
+================================================================================
+SOURCE 1
+================================================================================
+Rows: 2,206,821
+Columns: ['entity_id', 'business_name', 'business_address', 'country']
+
+Missing / empty values:
+  entity_id                   0 (  0.00%)
+  business_name               0 (  0.00%)
+  business_address            0 (  0.00%)
+  country                     0 (  0.00%)
+
+Unique entity IDs: 2,206,821
+Duplicate entity IDs: 0
+
+Country distribution:
+  US                   1,323,633 ( 59.98%)
+  India                 883,188 ( 40.02%)
+
+First 5 rows:
+   entity_id           business_name                                     business_address country
+S1-925783039     Orelee's Barbershop               1795 Westchester Drive, High Point, NC      US
+S1-773889195             Prime Money                      17560 Ellis Road, Tahlequah, OK      US
+S1-377745466           B+ Retail Inc                  1712 Montebello Avenue, Phoenix, AZ      US
+S1-133037285           Christ Chapel    2100 Cameron Drive, Unit APARTMENT G, Dundalk, MD      US
+S1-755362802 Prabhav Business Center 797, Lake Town Block A, Kolkata, Howrah, West Bengal   India
+
+================================================================================
+SOURCE 2
+================================================================================
+Rows: 5,034,616
+Columns: ['entity_id', 'business_name', 'business_address', 'country']
+
+Missing / empty values:
+  entity_id                   0 (  0.00%)
+  business_name               0 (  0.00%)
+  business_address      168,967 (  3.36%)
+  country                     0 (  0.00%)
+
+Unique entity IDs: 5,034,616
+Duplicate entity IDs: 0
+
+Country distribution:
+  US                   3,016,817 ( 59.92%)
+  India                2,017,799 ( 40.08%)
+
+First 5 rows:
+   entity_id                   business_name                                 business_address country
+S2-166376419 राम मार्केटिंग प्राइवेट लिमिटेड     KH NO. -570/13, NEW DELHI, WEST DELHI, Delhi   India
+S2-764573417    -- Holloway Peak Inc Seafood                        105 ELM ST, MORGANTON, NC      US
+S2-639257739        आदित्य प्रॉपर्टीज एलएलपी G-3/571, GULMOHAR COLONY, BHOPAL, Madhya Pradesh   India
+S2-163963287                      Summit Inc            GREENSBORO, NC, 19 1/2 STARDUST TRAIL      US
+ S2-49942811    Delta Tetlecommunication Inc                  914 PIERPONT AVE, CLEVELAND, OH      US
+
+================================================================================
+SOURCE 3
+================================================================================
+Rows: 5,285,603
+Columns: ['entity_id', 'business_name', 'business_address', 'country']
+
+Missing / empty values:
+  entity_id                   0 (  0.00%)
+  business_name               0 (  0.00%)
+  business_address      175,916 (  3.33%)
+  country                     0 (  0.00%)
+
+Unique entity IDs: 5,285,603
+Duplicate entity IDs: 0
+
+Country distribution:
+  US                   3,170,056 ( 59.98%)
+  India                2,115,547 ( 40.02%)
+
+First 5 rows:
+   entity_id                               business_name                                                                            business_address country
+S3-202863386                          wilfordhancock.com                                                                 Mack Rd, Haltom City, Texas      US
+S3-859268022 International South Consultants Private Ltd                                                                                               India
+ S3-22467283                 LLC Moncada Léarning Center                                                             5780 Fawn Ct, Fort Worth, Texas      US
+S3-671162755                              Moyna's Coffee                                                1 Ivanhoe Ave, PO Box 6009, Cincinnati, Ohio      US
+S3-960981775                Pvt. EFS Print Ventures Ltd. Door No 183, 41St Cross, 22Nd Main 9Th Block Jayanagar, Bengaluru Urban, Bangalore, ಕರ್ನಾಟಕ   India
+
+================================================================================
+GROUND TRUTH
+================================================================================
+Ground-truth S1 entities: 2,206,821
+
+Number of matches per S1:
+    0 matches :  123,247 (  5.58%)
+    1 matches :  119,157 (  5.40%)
+    2 matches :  375,212 ( 17.00%)
+    3 matches :  530,841 ( 24.05%)
+    4 matches :  484,115 ( 21.94%)
+    5 matches :  321,957 ( 14.59%)
+    6 matches :  164,868 (  7.47%)
+    7 matches :   63,968 (  2.90%)
+    8 matches :   18,680 (  0.85%)
+    9 matches :    4,205 (  0.19%)
+   10 matches :      534 (  0.02%)
+   11 matches :       37 (  0.00%)
+
+Summary:
+  Singletons:        123,247
+  Exactly 1 match:   119,157
+  Multiple matches: 1,964,417
+
+Total positive links: 7,638,365
+
+Positive links by source:
+  S2 links: 3,693,619
+  S3 links: 3,944,746
+
+S1 entities with:
+  ≥1 S2 match: 1,919,076
+  ≥1 S3 match: 1,940,545
+  matches in both: 1,776,047
+
+Largest match counts:
+source1_entity_id                                                                                                                             matched_entity_ids  num_matches
+     S1-202191494    S2-788055041,S2-22414369,S2-70497037,S2-322574019,S2-120929795,S3-15920475,S3-753730354,S3-692638909,S3-166966958,S3-298405127,S3-461763671           11
+     S1-378932224   S2-683456420,S2-348270067,S2-814123832,S2-52408692,S2-514463631,S3-510793798,S3-469525509,S3-122734175,S3-649703819,S3-41184247,S3-871830597           11
+      S1-83149500  S2-900789342,S2-853474906,S2-882475241,S2-397036823,S2-344520493,S3-73735654,S3-396366991,S3-985410996,S3-710816296,S3-299625950,S3-555699494           11
+     S1-131957702  S2-899004706,S2-312445844,S2-523247608,S2-707965258,S2-282005479,S3-119009753,S3-402709664,S3-500888482,S3-260757218,S3-25000516,S3-707099204           11
+     S1-806895726  S2-13215685,S2-894126623,S2-861293919,S2-271433775,S2-656560009,S3-392418217,S3-543081819,S3-586045747,S3-216152992,S3-463528642,S3-663907312           11
+      S1-98979687    S2-14894757,S2-551672968,S2-127980615,S2-68688958,S2-622855186,S3-376573533,S3-686847223,S3-935091095,S3-85923322,S3-987070237,S3-444820623           11
+     S1-667470626 S2-244496472,S2-140798239,S2-761090325,S2-847406757,S2-984605056,S3-106835900,S3-874065803,S3-813247000,S3-420808137,S3-342425785,S3-193091957           11
+     S1-202947021 S2-840158076,S2-985471974,S2-759961691,S2-296358695,S2-949195435,S3-850731528,S3-803975065,S3-306348494,S3-610629382,S3-169221480,S3-609381246           11
+     S1-922469887  S2-374317917,S2-865292746,S2-48795525,S2-612755348,S2-338750498,S3-353877003,S3-112741439,S3-517378418,S3-292905066,S3-248106716,S3-433885075           11
+     S1-662651729 S2-715742383,S2-970330969,S2-722699075,S2-482797490,S2-566480858,S3-418079847,S3-576133663,S3-534100537,S3-797182546,S3-261712700,S3-817154303           11
+
+================================================================================
+GROUND TRUTH ID VALIDATION
+================================================================================
+GT source1 IDs missing from S1: 0
+GT target IDs missing from S2/S3: 0
+GT rows containing duplicate targets: 0
+
+================================================================================
+SOURCE 1 TEXT STATISTICS
+================================================================================
+
+business_name
+Character length:
+count    2.206821e+06
+mean     2.403440e+01
+std      7.740533e+00
+min      3.000000e+00
+25%      1.800000e+01
+50%      2.400000e+01
+75%      3.000000e+01
+90%      3.400000e+01
+95%      3.700000e+01
+99%      4.200000e+01
+max      1.050000e+02
+
+Token count:
+count    2.206821e+06
+mean     3.547613e+00
+std      9.779324e-01
+min      1.000000e+00
+25%      3.000000e+00
+50%      4.000000e+00
+75%      4.000000e+00
+90%      5.000000e+00
+95%      5.000000e+00
+99%      6.000000e+00
+max      1.600000e+01
+
+Unique values: 1,539,229
+
+business_address
+Character length:
+count    2.206821e+06
+mean     5.206621e+01
+std      2.532972e+01
+min      1.100000e+01
+25%      3.300000e+01
+50%      4.100000e+01
+75%      7.000000e+01
+90%      9.000000e+01
+95%      1.030000e+02
+99%      1.240000e+02
+max      2.560000e+02
+
+Token count:
+count    2.206821e+06
+mean     8.031723e+00
+std      3.511408e+00
+min      2.000000e+00
+25%      5.000000e+00
+50%      7.000000e+00
+75%      1.000000e+01
+90%      1.300000e+01
+95%      1.500000e+01
+99%      1.900000e+01
+max      4.300000e+01
+
+Unique values: 2,130,606
+
+================================================================================
+SOURCE 2 TEXT STATISTICS
+================================================================================
+
+business_name
+Character length:
+count    5.034616e+06
+mean     2.510357e+01
+std      8.894692e+00
+min      2.000000e+00
+25%      1.900000e+01
+50%      2.500000e+01
+75%      3.100000e+01
+90%      3.700000e+01
+95%      4.000000e+01
+99%      4.800000e+01
+max      1.040000e+02
+
+Token count:
+count    5.034616e+06
+mean     3.496624e+00
+std      1.240322e+00
+min      1.000000e+00
+25%      3.000000e+00
+50%      4.000000e+00
+75%      4.000000e+00
+90%      5.000000e+00
+95%      5.000000e+00
+99%      6.000000e+00
+max      1.500000e+01
+
+Unique values: 4,402,009
+
+business_address
+Character length:
+count    5.034616e+06
+mean     4.622591e+01
+std      2.484467e+01
+min      0.000000e+00
+25%      3.000000e+01
+50%      3.700000e+01
+75%      6.100000e+01
+90%      8.300000e+01
+95%      9.600000e+01
+99%      1.180000e+02
+max      2.490000e+02
+
+Token count:
+count    5.034616e+06
+mean     7.285136e+00
+std      3.577335e+00
+min      0.000000e+00
+25%      5.000000e+00
+50%      6.000000e+00
+75%      9.000000e+00
+90%      1.200000e+01
+95%      1.500000e+01
+99%      1.800000e+01
+max      4.600000e+01
+
+Unique values: 4,337,262
+
+================================================================================
+SOURCE 3 TEXT STATISTICS
+================================================================================
+
+business_name
+Character length:
+count    5.285603e+06
+mean     2.520214e+01
+std      9.493623e+00
+min      2.000000e+00
+25%      1.800000e+01
+50%      2.500000e+01
+75%      3.100000e+01
+90%      3.700000e+01
+95%      4.200000e+01
+99%      5.000000e+01
+max      1.230000e+02
+
+Token count:
+count    5.285603e+06
+mean     3.525458e+00
+std      1.344741e+00
+min      1.000000e+00
+25%      3.000000e+00
+50%      4.000000e+00
+75%      4.000000e+00
+90%      5.000000e+00
+95%      6.000000e+00
+99%      7.000000e+00
+max      1.800000e+01
+
+Unique values: 4,651,609
+
+business_address
+Character length:
+count    5.285603e+06
+mean     4.671444e+01
+std      2.164981e+01
+min      0.000000e+00
+25%      3.500000e+01
+50%      4.200000e+01
+75%      5.400000e+01
+90%      7.700000e+01
+95%      9.100000e+01
+99%      1.150000e+02
+max      2.400000e+02
+
+Token count:
+count    5.285603e+06
+mean     7.171958e+00
+std      3.393151e+00
+min      0.000000e+00
+25%      5.000000e+00
+50%      6.000000e+00
+75%      8.000000e+00
+90%      1.200000e+01
+95%      1.400000e+01
+99%      1.800000e+01
+max      4.300000e+01
+
+Unique values: 4,632,765
