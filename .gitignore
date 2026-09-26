@@ -1,0 +1,10 @@
+
+# Python virtual environment
+.venv/
+
+# Large generated files
+outputs/normalization_analysis.sqlite
+outputs/matcher_features_s2_india_sample.parquet
+
+# Local datasets
+data/
